@@ -1,0 +1,58 @@
+20.1.2022
+
+Klassendiagramm Bedeutungen mit LNagler:
+
+Klasse: Controller KOnsole
+
+
+
+
+Klasse: Game
+
+int randStarter 
+Wählt aus welcher Spieler beginnt mit einer rd Zahl(1,0)
+
+Klasse Player:
+
+String name
+(Name des Spielers)
+Char Symbol
+(Symbol des Spielers(x,o))
+String Standartsymbole
+
+Methoden:
+Boolean Proof
+(Prüft ob name des Spielers und symbole der Spieler unterschiedlich sind)
+String ChooseName
+(Spieler wählt seinen Namen aus)
+Char chooseSymbol
+(Spieler wählt sein Symbol aus)
+
+Klasse: GameField
+
+Int[X][Y] Field
+(Das Gesamt Spielfeld mit einem 2Dimensionalen Array x = 7, y = 6)
+Int X
+(Zeilen)
+
+
+Methoden:
+
+Void Used
+(Ein nicht benutztes Feld wird auf benutzt gestzt)
+Boolean isUsed
+(Es wird geprüft ob ein Feld bereits benutz wurde)
+
+
+Klasse: GameFieldView
+
+Methode:
+VOid ShowGameField
+(Zeigt das GameField)
+
+Klasse: PlayerView
+
+Methode:
+
+void ShowPlayer
+(Zeigt derzeitigen Spieler an)
