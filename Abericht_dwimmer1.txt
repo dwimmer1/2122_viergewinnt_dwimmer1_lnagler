@@ -1,3 +1,12 @@
+/**
+* Funktionsbeschreibung
+*
+* @param    par1 Kommentar
+* @param    par2 Kommentar
+* @param    par3 Kommentar
+* @return 	none
+*/
+
 20.1.2022
 
 Klassendiagramm Bedeutungen mit LNagler:
