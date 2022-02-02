@@ -1,7 +1,9 @@
 
 2.2.2022
 Klassendiagramm in Java hinzugefügt
-uns ausprogammiert
+Metoden eingefügt
+PlayField ausprogrammiert
+
 
 
 
