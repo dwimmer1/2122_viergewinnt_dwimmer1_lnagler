@@ -4,41 +4,41 @@ package com.example.viergewinnt_dwimmer1_lnagler1.modell;
 import java.util.Objects;
 
 /**
-* @generated
-*/
+ * @generated
+ */
 public class Stone {
-    
+
     /**
-    * @generated
-    */
+     * @generated
+     */
     private char symbol;
     private char symbol1;
-    
-    /**+
-    * @generated
-    */
-    
-    
-    
+
     /**
-    * @generated
-    */
+     * @generated
+     */
+
+
+
+    /**
+     * @generated
+     */
     public char getSymbol() {
         return this.symbol;
     }
-    
+
     /**
-    * @generated
-    */
+     * @generated
+     */
     public char setSymbol(char symbol) {
         this.symbol1 = symbol;
         proof();
         return '0';
     }
-    
+
     /**
-    * @generated
-    */
+     * @generated
+     */
 
     public boolean proof(){
         boolean rv = false;
@@ -48,14 +48,14 @@ public class Stone {
         }
         return rv;
     }
-    
-    
+
+
 
     //                          Operations                                  
-    
+
     /**
-    * @generated
-    */
+     * @generated
+     */
     public void chooseSettings() {
         //TODO
     }

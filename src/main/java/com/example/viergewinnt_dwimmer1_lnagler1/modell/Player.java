@@ -1,72 +1,60 @@
 package com.example.viergewinnt_dwimmer1_lnagler1.modell;
 
 
-/**
-* @generated
-*/
-public class Player {
-    
-    /**
-    * @generated
-    */
-    private String name;
-    
-    /**
-    * @generated
-    */
-    private String standardSymbol;
-    
-    
-    
-    /**
-    * @generated
-    */
-    public String getName() {
-        return this.name;
-    }
-    
-    /**
-    * @generated
-    */
-    public String setName(String name) {
-        this.name = name;
-    }
-    
-    /**
-    * @generated
-    */
-    public String getStandardSymbol() {
-        return this.standardSymbol;
-    }
-    
-    /**
-    * @generated
-    */
-    public String setStandardSymbol(String standardSymbol) {
-        this.standardSymbol = standardSymbol;
-    }
-    
-    
+import java.util.Objects;
 
-    //                          Operations                                  
-    
+/**
+ * @generated
+ */
+public class Player extends Stone{
+
     /**
-    * @generated
-    */
-    public proof() {
+     * @generated
+     */
+    private static String name;
+    public static boolean rv = true;
+    private String name1;
+
+    /**
+     * @generated
+     */
+
+
+
+
+    /**
+     * @generated
+     */
+    public String getName() {
+
+        return name;
+    }
+
+    /**
+     * @generated
+     */
+    public boolean setName(String name) {
+        this.name1 = name;
+        System.out.println(rv);
+        if(proof()){
+            Player.name = name1;
+            return true;
+        }
+        return false;
+        //TODO In View diese Method mit einem sout auftrufen
+    }
+
+    /**
+     * @generated
+     */
+    public boolean proof() {
+        if(!Objects.equals(this.name1, name)){
+            name = name1;
+            rv = false;
+        }else{
+            rv = true;
+        }
+        return rv;
         //TODO
     }
-    /**
-    * @generated
-    */
-    public chooseName() {
-        //TODO
-    }
-    /**
-    * @generated
-    */
-    public getStone() {
-        //TODO
-    }
-    
 }
