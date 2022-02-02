@@ -10,7 +10,7 @@ public class GameField {
     * @generated
      * Feld mit 6 Rows und 7 Columns (Spalten)
     */
-    String[][] fieldXY = new String[6][7];
+    String[][] fieldXY = new String[7][7];
     int[] einwurfFeld = new int[7];
     private Integer x;
     /**
@@ -22,15 +22,17 @@ public class GameField {
     
     public void SetXY(){
         for (int i = 0; i < fieldXY.length; i++) {
-            for (int j = 0; j < fieldXY.length; j++) {
+            for (int j = 0; j < fieldXY[i].length; j++) {
                 fieldXY[i][j] = "#";
             }
 
         }
-
-
     }
-    
+
+    public int[] getEinwurfFeld() {
+        return einwurfFeld;
+    }
+
     /**
     * @generated
      * @return
