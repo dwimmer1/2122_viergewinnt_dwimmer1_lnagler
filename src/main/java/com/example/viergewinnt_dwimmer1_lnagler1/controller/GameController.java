@@ -42,7 +42,7 @@ public class GameController {
                         }
                     }
                 }
-                //du huansohn kumm zruck wixxaaaaaa
+                //???
                 view.showGameField(field);
             }
         } catch (Exception e) {
