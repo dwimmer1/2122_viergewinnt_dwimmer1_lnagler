@@ -15,7 +15,7 @@ public class StoneView {
     /**
     * @generated
     */
-    public showStone() {
+    public void showStone() {
         //TODO
     }
     
