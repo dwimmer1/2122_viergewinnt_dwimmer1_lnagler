@@ -15,19 +15,19 @@ public class Conditions {
     /**
     * @generated
     */
-    public win() {
+    public void win() {
         //TODO
     }
     /**
     * @generated
     */
-    public loose() {
+    public void loose() {
         //TODO
     }
     /**
     * @generated
     */
-    public draw() {
+    public void draw() {
         //TODO
     }
     

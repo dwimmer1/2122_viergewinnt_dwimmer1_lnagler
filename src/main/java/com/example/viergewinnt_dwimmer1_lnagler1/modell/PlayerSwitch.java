@@ -15,7 +15,7 @@ public class PlayerSwitch {
     /**
     * @generated
     */
-    public nextPlayer() {
+    public void nextPlayer() {
         //TODO
     }
     

@@ -1,24 +1,20 @@
 package com.example.viergewinnt_dwimmer1_lnagler1.modell;
 
 
-import java.util.Objects;
-
 /**
 * @generated
 */
-public class Player extends Stone{
+public class Player {
     
     /**
     * @generated
     */
-    private static String name;
-    public static boolean rv = true;
-    private String name1;
+    private String name;
     
     /**
     * @generated
     */
-
+    private String standardSymbol;
     
     
     
@@ -26,35 +22,51 @@ public class Player extends Stone{
     * @generated
     */
     public String getName() {
-
-        return name;
+        return this.name;
     }
     
     /**
     * @generated
     */
-    public boolean setName(String name) {
-        this.name1 = name;
-        System.out.println(rv);
-        if(proof()){
-            Player.name = name1;
-            return true;
-        }
-        return false;
-        //TODO In View diese Method mit einem sout auftrufen
+    public String setName(String name) {
+        this.name = name;
     }
     
-    /**+
+    /**
     * @generated
     */
-    public boolean proof() {
-        if(!Objects.equals(this.name1, name)){
-            name = name1;
-            rv = false;
-        }else{
-            rv = true;
-        }
-        return rv;
+    public String getStandardSymbol() {
+        return this.standardSymbol;
+    }
+    
+    /**
+    * @generated
+    */
+    public String setStandardSymbol(String standardSymbol) {
+        this.standardSymbol = standardSymbol;
+    }
+    
+    
+
+    //                          Operations                                  
+    
+    /**
+    * @generated
+    */
+    public proof() {
         //TODO
     }
+    /**
+    * @generated
+    */
+    public chooseName() {
+        //TODO
+    }
+    /**
+    * @generated
+    */
+    public getStone() {
+        //TODO
+    }
+    
 }
