@@ -53,8 +53,10 @@ public class Stone {
     /**
     * @generated
     */
-    public chooseSettings() {
+    public void chooseSettings() {
         //TODO
+
+
     }
     
 }
