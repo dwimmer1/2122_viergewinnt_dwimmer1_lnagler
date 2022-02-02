@@ -26,7 +26,6 @@ public class GameController {
             createPl1.createPlayer();
             String eingabe = br.readLine();
             Player1.setName(eingabe);
-            System.out.println(eingabe);
         } while (Player.rv);
         do {
             InputStreamReader pl2 = new InputStreamReader(System.in);
@@ -34,7 +33,6 @@ public class GameController {
             createPl2.createPlayer();
             String eingabe1 = br1.readLine();
             Player2.setName(eingabe1);
-            System.out.println(eingabe1);
         } while (Player.rv);
 
     }

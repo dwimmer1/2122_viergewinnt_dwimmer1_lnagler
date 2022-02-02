@@ -35,7 +35,6 @@ public class Player extends Stone{
      */
     public boolean setName(String name) {
         this.name1 = name;
-        System.out.println(rv);
         if(proof()){
             Player.name = name1;
             return true;
