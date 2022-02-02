@@ -1,4 +1,5 @@
-package com.example.viergewinnt_dwimmer1_lnagler1;
+package GameFieldView;
+
 
 /**
 * @generated
