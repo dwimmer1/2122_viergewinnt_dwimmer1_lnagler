@@ -14,7 +14,7 @@ public class Stone {
     private char symbol;
     private char symbol1;
     
-    /**
+    /**+
     * @generated
     */
     

@@ -22,7 +22,7 @@ public class PlayerView {
 
     //                          Operations
 
-    /**
+    /**+
      * @generated
      */
     public void showPlayer() {

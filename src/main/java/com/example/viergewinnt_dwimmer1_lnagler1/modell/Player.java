@@ -44,7 +44,7 @@ public class Player extends Stone{
         //TODO In View diese Method mit einem sout auftrufen
     }
     
-    /**
+    /**+
     * @generated
     */
     public boolean proof() {

@@ -39,7 +39,7 @@ public class GameController {
 
     }
 
-    /**
+    /**+
      * @generated
      */
     private Integer randStarter;
