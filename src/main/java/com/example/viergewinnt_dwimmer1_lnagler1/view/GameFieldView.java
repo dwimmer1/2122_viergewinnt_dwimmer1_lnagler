@@ -14,9 +14,22 @@ public class GameFieldView {
     
     /**
     * @generated
+     *
+     * zeigt gameField
     */
-    public showGameField() {
-        //TODO
+    public void showGameField() {
+
+        System.out.println("---------------------------------");
+        System.out.println("|\t#\t#\t#\t#\t#\t#\t#\t|");
+        System.out.println("|\t#\t#\t#\t#\t#\t#\t#\t|");
+        System.out.println("|\t#\t#\t#\t#\t#\t#\t#\t|");
+        System.out.println("|\t#\t#\t#\t#\t#\t#\t#\t|");
+        System.out.println("|\t#\t#\t#\t#\t#\t#\t#\t|");
+        System.out.println("|\t#\t#\t#\t#\t#\t#\t#\t|");
+        System.out.println("---------------------------------");
+
+
+
     }
     
 }

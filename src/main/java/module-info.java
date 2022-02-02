@@ -4,7 +4,6 @@ module com.example.viergewinnt_dwimmer1_lnagler1 {
 
 
     opens com.example.viergewinnt_dwimmer1_lnagler1 to javafx.fxml;
-    exports com.example.viergewinnt_dwimmer1_lnagler1;
     exports com.example.viergewinnt_dwimmer1_lnagler1.view;
     opens com.example.viergewinnt_dwimmer1_lnagler1.view to javafx.fxml;
     exports com.example.viergewinnt_dwimmer1_lnagler1.modell;

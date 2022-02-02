@@ -15,7 +15,7 @@ public class PlayerView {
     /**
     * @generated
     */
-    public showPlayer() {
+    public void showPlayer() {
         //TODO
     }
     
