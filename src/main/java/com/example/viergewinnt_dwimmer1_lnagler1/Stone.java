@@ -1,4 +1,4 @@
-package Stone;
+package com.example.viergewinnt_dwimmer1_lnagler1;
 
 
 /**
@@ -30,6 +30,8 @@ public class Stone {
     */
     public char setSymbol(char symbol) {
         this.symbol = symbol;
+
+        return '0';
     }
     
     /**
@@ -44,6 +46,7 @@ public class Stone {
     */
     public String setColor(String color) {
         this.color = color;
+        return "";
     }
     
     
