@@ -30,7 +30,6 @@ public class Player {
     */
     public String setName(String name) {
         this.name = name;
-        return name;
     }
     
     /**
@@ -45,7 +44,6 @@ public class Player {
     */
     public String setStandardSymbol(String standardSymbol) {
         this.standardSymbol = standardSymbol;
-        return standardSymbol;
     }
     
     
@@ -55,19 +53,19 @@ public class Player {
     /**
     * @generated
     */
-    public void proof() {
+    public proof() {
         //TODO
     }
     /**
     * @generated
     */
-    public void chooseName() {
+    public chooseName() {
         //TODO
     }
     /**
     * @generated
     */
-    public void getStone() {
+    public getStone() {
         //TODO
     }
     

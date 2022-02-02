@@ -1,6 +1,8 @@
 package com.example.viergewinnt_dwimmer1_lnagler1.modell;
 
 
+import java.util.Objects;
+
 /**
 * @generated
 */
@@ -10,11 +12,11 @@ public class Stone {
     * @generated
     */
     private char symbol;
+    private char symbol1;
     
-    /**
+    /**+
     * @generated
     */
-    private String color;
     
     
     
@@ -29,24 +31,22 @@ public class Stone {
     * @generated
     */
     public char setSymbol(char symbol) {
-        this.symbol = symbol;
-
+        this.symbol1 = symbol;
+        proof();
         return '0';
     }
     
     /**
     * @generated
     */
-    public String getColor() {
-        return this.color;
-    }
-    
-    /**
-    * @generated
-    */
-    public String setColor(String color) {
-        this.color = color;
-        return "";
+
+    public boolean proof(){
+        boolean rv = false;
+        if(!Objects.equals(this.symbol, this.symbol1)){
+            this.symbol = symbol1;
+            rv = true;
+        }
+        return rv;
     }
     
     
@@ -58,8 +58,5 @@ public class Stone {
     */
     public void chooseSettings() {
         //TODO
-
-
     }
-    
 }
