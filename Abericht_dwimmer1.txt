@@ -25,7 +25,7 @@ Klasse: Game
 int randStarter 
 Wählt aus welcher Spieler beginnt mit einer rd Zahl(1,0)
 
-Klasse Player:
+Klasse com.example.viergewinnt_dwimmer1_lnagler1.Player:
 
 String name
 (Name des Spielers)
@@ -41,7 +41,7 @@ String ChooseName
 Char chooseSymbol
 (Spieler wählt sein Symbol aus)
 
-Klasse: GameField
+Klasse: com.example.viergewinnt_dwimmer1_lnagler1.GameField
 
 Int[X][Y] Field
 (Das Gesamt Spielfeld mit einem 2Dimensionalen Array x = 7, y = 6)
@@ -57,13 +57,13 @@ Boolean isUsed
 (Es wird geprüft ob ein Feld bereits benutz wurde)
 
 
-Klasse: GameFieldView
+Klasse: com.example.viergewinnt_dwimmer1_lnagler1.GameFieldView
 
 Methode:
 VOid ShowGameField
-(Zeigt das GameField)
+(Zeigt das com.example.viergewinnt_dwimmer1_lnagler1.GameField)
 
-Klasse: PlayerView
+Klasse: com.example.viergewinnt_dwimmer1_lnagler1.PlayerView
 
 Methode:
 

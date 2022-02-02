@@ -1,5 +1,4 @@
-package Stone;
-
+package com.example.viergewinnt_dwimmer1_lnagler1;
 
 /**
 * @generated

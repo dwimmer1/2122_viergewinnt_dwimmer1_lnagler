@@ -1,10 +1,9 @@
-package StoneView;
-
+package com.example.viergewinnt_dwimmer1_lnagler1;
 
 /**
 * @generated
 */
-public class StoneView {
+public class PlayerSwitch {
     
     
     
@@ -15,7 +14,7 @@ public class StoneView {
     /**
     * @generated
     */
-    public showStone() {
+    public nextPlayer() {
         //TODO
     }
     

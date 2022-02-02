@@ -1,10 +1,9 @@
-package PlayerSwitch;
-
+package com.example.viergewinnt_dwimmer1_lnagler1;
 
 /**
 * @generated
 */
-public class PlayerSwitch {
+public class GameFieldView {
     
     
     
@@ -15,7 +14,7 @@ public class PlayerSwitch {
     /**
     * @generated
     */
-    public nextPlayer() {
+    public showGameField() {
         //TODO
     }
     

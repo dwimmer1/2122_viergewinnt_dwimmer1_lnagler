@@ -1,5 +1,4 @@
-package GameField;
-
+package com.example.viergewinnt_dwimmer1_lnagler1;
 
 /**
 * @generated
@@ -53,13 +52,13 @@ public class GameField {
     /**
     * @generated
     */
-    public use() {
+    public void use() {
         //TODO
     }
     /**
     * @generated
     */
-    public isUsed() {
+    public void isUsed() {
         //TODO
     }
     

@@ -1,10 +1,9 @@
-package GameFieldView;
-
+package com.example.viergewinnt_dwimmer1_lnagler1;
 
 /**
 * @generated
 */
-public class GameFieldView {
+public class PlayerView {
     
     
     
@@ -15,7 +14,7 @@ public class GameFieldView {
     /**
     * @generated
     */
-    public showGameField() {
+    public showPlayer() {
         //TODO
     }
     

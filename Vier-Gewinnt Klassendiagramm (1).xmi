@@ -246,7 +246,7 @@
       </xmi:Extension>
       <importedPackage href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#/"/>
     </packageImport>
-    <packagedElement xsi:type="uml:Class" xmi:id="_igsq4FweEDqbXpyo39Qm4A" name="GameController">
+    <packagedElement xsi:type="uml:Class" xmi:id="_igsq4FweEDqbXpyo39Qm4A" name="com.example.viergewinnt_dwimmer1_lnagler1.GameController">
       <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
         <eAnnotations xmi:id="_igsq4FweEDqbXpyo39Qm4A0" source="genmymodel">
           <details xmi:id="_igsq4FweEDqbXpyo39Qm4A00" key="uuid" value="_igsq4FweEDqbXpyo39Qm4A"/>
@@ -261,7 +261,7 @@
         <type xsi:type="uml:PrimitiveType" href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#//Integer"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xsi:type="uml:Class" xmi:id="__epA4FweEDqbXpyo39Qm4A" name="Player">
+    <packagedElement xsi:type="uml:Class" xmi:id="__epA4FweEDqbXpyo39Qm4A" name="com.example.viergewinnt_dwimmer1_lnagler1.Player">
       <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
         <eAnnotations xmi:id="__epA4FweEDqbXpyo39Qm4A0" source="genmymodel">
           <details xmi:id="__epA4FweEDqbXpyo39Qm4A00" key="uuid" value="__epA4FweEDqbXpyo39Qm4A"/>
@@ -328,7 +328,7 @@
         </eAnnotations>
       </xmi:Extension>
     </packagedElement>
-    <packagedElement xsi:type="uml:Class" xmi:id="_KNtZYFwkEDqrG_ydOIGv8A" name="GameField">
+    <packagedElement xsi:type="uml:Class" xmi:id="_KNtZYFwkEDqrG_ydOIGv8A" name="com.example.viergewinnt_dwimmer1_lnagler1.GameField">
       <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
         <eAnnotations xmi:id="_KNtZYFwkEDqrG_ydOIGv8A0" source="genmymodel">
           <details xmi:id="_KNtZYFwkEDqrG_ydOIGv8A00" key="uuid" value="_KNtZYFwkEDqrG_ydOIGv8A"/>
@@ -387,7 +387,7 @@
         </eAnnotations>
       </xmi:Extension>
     </packagedElement>
-    <packagedElement xsi:type="uml:Class" xmi:id="_Z8NdIFwlEDqrG_ydOIGv8A" name="GameFieldView">
+    <packagedElement xsi:type="uml:Class" xmi:id="_Z8NdIFwlEDqrG_ydOIGv8A" name="com.example.viergewinnt_dwimmer1_lnagler1.GameFieldView">
       <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
         <eAnnotations xmi:id="_Z8NdIFwlEDqrG_ydOIGv8A0" source="genmymodel">
           <details xmi:id="_Z8NdIFwlEDqrG_ydOIGv8A00" key="uuid" value="_Z8NdIFwlEDqrG_ydOIGv8A"/>
@@ -408,7 +408,7 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xsi:type="uml:Class" xmi:id="_88vnsFwlEDqrG_ydOIGv8A" name="PlayerView">
+    <packagedElement xsi:type="uml:Class" xmi:id="_88vnsFwlEDqrG_ydOIGv8A" name="com.example.viergewinnt_dwimmer1_lnagler1.PlayerView">
       <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
         <eAnnotations xmi:id="_88vnsFwlEDqrG_ydOIGv8A0" source="genmymodel">
           <details xmi:id="_88vnsFwlEDqrG_ydOIGv8A00" key="uuid" value="_88vnsFwlEDqrG_ydOIGv8A"/>
@@ -422,7 +422,7 @@
         </xmi:Extension>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xsi:type="uml:Class" xmi:id="_kuazUGZpEDq2O7ZbDkzGJg" name="Conditions">
+    <packagedElement xsi:type="uml:Class" xmi:id="_kuazUGZpEDq2O7ZbDkzGJg" name="com.example.viergewinnt_dwimmer1_lnagler1.Conditions">
       <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
         <eAnnotations xmi:id="_kuazUGZpEDq2O7ZbDkzGJg0" source="genmymodel">
           <details xmi:id="_kuazUGZpEDq2O7ZbDkzGJg00" key="uuid" value="_kuazUGZpEDq2O7ZbDkzGJg"/>
@@ -450,14 +450,14 @@
         </xmi:Extension>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xsi:type="uml:Interface" xmi:id="_cdFkYGZrEDqEMLIvnhqcSA" name="GameField">
+    <packagedElement xsi:type="uml:Interface" xmi:id="_cdFkYGZrEDqEMLIvnhqcSA" name="com.example.viergewinnt_dwimmer1_lnagler1.GameField">
       <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
         <eAnnotations xmi:id="_cdFkYGZrEDqEMLIvnhqcSA0" source="genmymodel">
           <details xmi:id="_cdFkYGZrEDqEMLIvnhqcSA00" key="uuid" value="_cdFkYGZrEDqEMLIvnhqcSA"/>
         </eAnnotations>
       </xmi:Extension>
     </packagedElement>
-    <packagedElement xsi:type="uml:Class" xmi:id="_mZSu0GZrEDqEMLIvnhqcSA" name="Stone">
+    <packagedElement xsi:type="uml:Class" xmi:id="_mZSu0GZrEDqEMLIvnhqcSA" name="com.example.viergewinnt_dwimmer1_lnagler1.Stone">
       <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
         <eAnnotations xmi:id="_mZSu0GZrEDqEMLIvnhqcSA0" source="genmymodel">
           <details xmi:id="_mZSu0GZrEDqEMLIvnhqcSA00" key="uuid" value="_mZSu0GZrEDqEMLIvnhqcSA"/>
@@ -486,7 +486,7 @@
         </xmi:Extension>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xsi:type="uml:Class" xmi:id="_zPyG0GZwEDqEMLIvnhqcSA" name="StoneView">
+    <packagedElement xsi:type="uml:Class" xmi:id="_zPyG0GZwEDqEMLIvnhqcSA" name="com.example.viergewinnt_dwimmer1_lnagler1.StoneView">
       <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
         <eAnnotations xmi:id="_zPyG0GZwEDqEMLIvnhqcSA0" source="genmymodel">
           <details xmi:id="_zPyG0GZwEDqEMLIvnhqcSA00" key="uuid" value="_zPyG0GZwEDqEMLIvnhqcSA"/>
@@ -500,7 +500,7 @@
         </xmi:Extension>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xsi:type="uml:Class" xmi:id="_P4iP8GZxEDqEMLIvnhqcSA" name="PlayerSwitch">
+    <packagedElement xsi:type="uml:Class" xmi:id="_P4iP8GZxEDqEMLIvnhqcSA" name="com.example.viergewinnt_dwimmer1_lnagler1.PlayerSwitch">
       <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
         <eAnnotations xmi:id="_P4iP8GZxEDqEMLIvnhqcSA0" source="genmymodel">
           <details xmi:id="_P4iP8GZxEDqEMLIvnhqcSA00" key="uuid" value="_P4iP8GZxEDqEMLIvnhqcSA"/>
