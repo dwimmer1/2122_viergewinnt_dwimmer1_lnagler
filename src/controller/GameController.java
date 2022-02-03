@@ -137,7 +137,7 @@ public class GameController {
         char symbol;
         try {
             //1 - 7
-            while (true) {
+            while (true) {  // TODO Wittner: EINE ENDLOSSCHLEIFE ?!!!!!!
                 String hash = "#";
                 Scanner c1 = new Scanner(System.in);
                 int s = c1.nextInt();
@@ -156,7 +156,7 @@ public class GameController {
                             field[i][s] = String.valueOf(symbol);
                             currentPlayer = playerSwitch.nextPlayer(currentPlayer);
 
-                            break;
+                            break;  // TODO Wittner: UND DIE NOCH MIT BREAK VERLASSEN!!!!! Das ist ein NO-GO
                         } else {
                             //  field[i][s] = playerSymbol[0];
                         }
