@@ -1,61 +1,77 @@
 package com.example.viergewinnt_dwimmer1_lnagler1.modell;
 
 
+import com.example.viergewinnt_dwimmer1_lnagler1.view.StoneView;
+
 import java.util.Objects;
 
 /**
-* @generated
-*/
+ * @generated
+ */
 public class Stone {
-    
+
     /**
-    * @generated
-    */
-    private char symbol;
-    private char symbol1;
-    
-    /**+
-    * @generated
-    */
-    
-    
-    
+     * @generated
+     */
+    private static char symbol;
+    Character[] playerSymbol = {'X','O'};
+    public char symbol1;
+    public static boolean rv = true;
+
     /**
-    * @generated
-    */
-    public char getSymbol() {
-        return this.symbol;
+     * @generated
+     */
+
+
+    public char getSymbol1(){
+
+        return symbol1;
     }
-    
     /**
-    * @generated
-    */
+     * @generated
+     * @return
+     */
+    public Character[] getSymbol() {
+        return playerSymbol;
+    }
+
+    /**
+     * @generated
+     */
     public char setSymbol(char symbol) {
         this.symbol1 = symbol;
-        proof();
-        return '0';
+
+        if(proof()){
+            StoneView st = new StoneView();
+            st.vorhanden();
+        }else {
+            Stone.symbol = symbol1;
+        }
+                return Stone.symbol;
     }
-    
+
     /**
-    * @generated
-    */
+     * @generated
+     */
+    //public String;
 
     public boolean proof(){
-        boolean rv = false;
-        if(!Objects.equals(this.symbol, this.symbol1)){
-            this.symbol = symbol1;
+        if(!Objects.equals(this.symbol1, symbol)){
+            symbol = symbol1;
+            rv = false;
+        }else {
             rv = true;
         }
         return rv;
     }
-    
-    
+
+
 
     //                          Operations                                  
-    
+
     /**
-    * @generated
-    */
+     * @generated
+     */
     public void chooseSettings() {
         //TODO
     }

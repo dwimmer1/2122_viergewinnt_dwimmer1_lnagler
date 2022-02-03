@@ -1,72 +1,72 @@
 package com.example.viergewinnt_dwimmer1_lnagler1.modell;
 
 
-/**
-* @generated
-*/
-public class Player {
-    
-    /**
-    * @generated
-    */
-    private String name;
-    
-    /**
-    * @generated
-    */
-    private String standardSymbol;
-    
-    
-    
-    /**
-    * @generated
-    */
-    public String getName() {
-        return this.name;
-    }
-    
-    /**
-    * @generated
-    */
-    public String setName(String name) {
-        this.name = name;
-    }
-    
-    /**
-    * @generated
-    */
-    public String getStandardSymbol() {
-        return this.standardSymbol;
-    }
-    
-    /**
-    * @generated
-    */
-    public String setStandardSymbol(String standardSymbol) {
-        this.standardSymbol = standardSymbol;
-    }
-    
-    
+import com.example.viergewinnt_dwimmer1_lnagler1.view.PlayerView;
 
-    //                          Operations                                  
-    
+import java.util.Objects;
+import java.util.Random;
+
+/**
+ * @generated
+ */
+public class Player extends Stone{
+
     /**
-    * @generated
-    */
-    public proof() {
-        //TODO
+     * @generated
+     */
+    private static String name;
+    public static boolean rv = true;
+    private String name1;
+
+    /**
+     * @generated
+     */
+
+
+
+
+    /**
+     * @generated
+     */
+    public String getName() {
+
+        return name1;
+    }
+
+    /**
+     * @generated
+     */
+    public String setName(String name) {
+        this.name1 = name;
+        if(proof()){
+            PlayerView pl = new PlayerView();
+            pl.vorhanden();
+        }else{
+            Player.name = name1;
+        }
+
+        return Player.name;
+        //TODO In View diese Method mit einem sout auftrufen
+    }
+
+    public String startPlayer(){
+        Random rand = new Random();
+        int value = rand.nextInt(2);
+        System.out.println(value);
+
+        return "";
     }
     /**
-    * @generated
-    */
-    public chooseName() {
+     * @generated
+     */
+    public boolean proof() {
+        if(!Objects.equals(this.name1, name)){
+            name = name1;
+            rv = false;
+        }else{
+            rv = true;
+        }
+        return rv;
         //TODO
     }
-    /**
-    * @generated
-    */
-    public getStone() {
-        //TODO
-    }
-    
 }

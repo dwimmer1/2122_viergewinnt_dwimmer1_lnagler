@@ -1,22 +1,39 @@
 package com.example.viergewinnt_dwimmer1_lnagler1.view;
 
 
+import java.util.Scanner;
+
 /**
-* @generated
-*/
+ * @generated
+ */
 public class StoneView {
-    
-    
-    
-    
+    public String createStone(String d) {
+
+        System.out.println(d);
+
+        return "";
+    }
+
+    public void vorhanden(){
+        System.out.println("Ist schon vergeben");
+
+    }
+
+    public String chooseSymbol(){
+
+        return "";
+    }
+
 
     //                          Operations                                  
-    
+
     /**
-    * @generated
-    */
-    public void showStone() {
+     * @generated
+     */
+        public void showStone(Character[] stones) {
+            System.out.println("Welchen Stein wollen Sie?");
+            System.out.println("[0] " + stones[0] + "\n" + "[1] " + stones[1]);
+        }
         //TODO
-    }
-    
+
 }

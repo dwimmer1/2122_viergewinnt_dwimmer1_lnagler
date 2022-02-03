@@ -57,10 +57,13 @@ public class GameField {
     public Integer getX() {
         return this.x;
     }
-    
+
     /**
-    * @generated
-    */
+     * Funktionsbeschreibung
+     *
+     * @param    x übergibt x koord
+     * @return 	none
+     */
     public void setX(int x) {
         this.x = x;
     }
@@ -68,7 +71,7 @@ public class GameField {
     
 
     //                          Operations                                  
-    
+
     /**
     * @generated,3
      * Dient zum spielen bzw spiel feld benutzn
