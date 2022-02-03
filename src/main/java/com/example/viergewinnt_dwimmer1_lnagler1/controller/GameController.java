@@ -22,6 +22,13 @@ import java.util.Scanner;
  */
 public class GameController {
     public static void main(String[] args) {
+
+
+        play();
+    }
+
+    public static void play() {
+
         int currentPlayer = 0;
 
         PlayerView createPl = new PlayerView();
@@ -117,10 +124,9 @@ public class GameController {
         } else {
             createPl.showPlayer(Player2.getName());
         }
-             //Stone stone = new Stone();
+        //Stone stone = new Stone();
 
         Character[] playerSymbol = stone.getSymbol();
-
 
 
         GameField game = new GameField();
@@ -141,9 +147,9 @@ public class GameController {
                 Scanner c1 = new Scanner(System.in);
                 int s = c1.nextInt();
                 if (s <= 7) {
-                    if (currentPlayer == 1){
-                      symbol = stone.symbol1;
-                    }else{
+                    if (currentPlayer == 1) {
+                        symbol = stone.symbol1;
+                    } else {
                         symbol = stone1.symbol1;
                     }
 
@@ -153,10 +159,10 @@ public class GameController {
                         if (field[i][s].equals(hash)) {
 
                             field[i][s] = String.valueOf(symbol);
-                           currentPlayer = playerSwitch.nextPlayer(currentPlayer);
+                            currentPlayer = playerSwitch.nextPlayer(currentPlayer);
 
                             break;
-                        }else {
+                        } else {
                             //  field[i][s] = playerSymbol[0];
                         }
                     }
