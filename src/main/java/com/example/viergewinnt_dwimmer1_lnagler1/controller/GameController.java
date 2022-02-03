@@ -45,7 +45,7 @@ public class GameController {
             Scanner choosesc = new Scanner(System.in);
             st.createStone(decision[0]);
             char choose = choosesc.next().charAt(0);
-            if (choose == 'J') {
+            if (choose == 'J'|| choose == 'j') {
                 Scanner standard = new Scanner(System.in);
                 st.createStone(decision[1]);
                 char symbol = standard.next().charAt(0);
