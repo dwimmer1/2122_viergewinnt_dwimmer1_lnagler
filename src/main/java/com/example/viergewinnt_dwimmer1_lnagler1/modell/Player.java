@@ -2,6 +2,7 @@ package com.example.viergewinnt_dwimmer1_lnagler1.modell;
 
 
 import java.util.Objects;
+import java.util.Random;
 
 /**
  * @generated
@@ -27,22 +28,31 @@ public class Player extends Stone{
      */
     public String getName() {
 
-        return name;
+        return name1;
     }
 
     /**
      * @generated
      */
-    public boolean setName(String name) {
+    public String setName(String name) {
         this.name1 = name;
         if(proof()){
+            Player.name = null;
+        }else{
             Player.name = name1;
-            return true;
         }
-        return false;
+
+        return Player.name;
         //TODO In View diese Method mit einem sout auftrufen
     }
 
+    public String startPlayer(){
+        Random rand = new Random();
+        int value = rand.nextInt(2);
+        System.out.println(value);
+
+        return "";
+    }
     /**
      * @generated
      */

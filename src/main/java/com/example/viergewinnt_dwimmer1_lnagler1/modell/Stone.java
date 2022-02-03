@@ -11,8 +11,10 @@ public class Stone {
     /**
      * @generated
      */
-    private char symbol;
+    private static char symbol;
+    String[] playerSymbol = {"X","O"};
     private char symbol1;
+    public static boolean rv = true;
 
     /**
      * @generated
@@ -22,9 +24,10 @@ public class Stone {
 
     /**
      * @generated
+     * @return
      */
-    public char getSymbol() {
-        return this.symbol;
+    public String[] getSymbol() {
+        return playerSymbol;
     }
 
     /**
@@ -32,18 +35,25 @@ public class Stone {
      */
     public char setSymbol(char symbol) {
         this.symbol1 = symbol;
-        proof();
-        return '0';
+
+        if(proof()){
+            Stone.symbol = '0';
+        }else {
+            Stone.symbol = symbol1;
+        }
+                return Stone.symbol;
     }
 
     /**
      * @generated
      */
+    //public String;
 
     public boolean proof(){
-        boolean rv = false;
-        if(!Objects.equals(this.symbol, this.symbol1)){
-            this.symbol = symbol1;
+        if(!Objects.equals(this.symbol1, symbol)){
+            symbol = symbol1;
+            rv = false;
+        }else {
             rv = true;
         }
         return rv;

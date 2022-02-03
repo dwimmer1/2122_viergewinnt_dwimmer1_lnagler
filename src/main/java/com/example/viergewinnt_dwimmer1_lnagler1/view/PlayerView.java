@@ -25,7 +25,8 @@ public class PlayerView {
     /**
      * @generated
      */
-    public void showPlayer() {
+    public void showPlayer(String name) {
+        System.out.println("Spieler " + name + " ist am Zug");
         //TODO
     }
 
