@@ -1,8 +1,10 @@
 package com.example.viergewinnt_dwimmer1_lnagler1.controller;
 
 
+import com.example.viergewinnt_dwimmer1_lnagler1.modell.GameField;
 import com.example.viergewinnt_dwimmer1_lnagler1.modell.Player;
 import com.example.viergewinnt_dwimmer1_lnagler1.modell.Stone;
+import com.example.viergewinnt_dwimmer1_lnagler1.view.GameFieldView;
 import com.example.viergewinnt_dwimmer1_lnagler1.view.PlayerView;
 import com.example.viergewinnt_dwimmer1_lnagler1.view.StoneView;
 
@@ -111,7 +113,49 @@ public class GameController {
         } else {
             createPl.showPlayer(Player2.getName());
         }
+             //Stone stone = new Stone();
+
+        Character[] playerSymbol = stone.getSymbol();
+
+
+
+        GameField game = new GameField();
+
+        game.SetXY();
+        String[][] field = game.getFieldXY();
+
+        GameFieldView view = new GameFieldView();
+        view.showGameField(field);
+
+        System.out.println("Wo woln sie einwerfen????");
+
+        try {
+            //1 - 7
+            while (true) {
+                Scanner c1 = new Scanner(System.in);
+                int s = c1.nextInt();
+                if (s <= 7) {
+                    //von unten nach oben
+                    for (int i = field[s].length - 1; i >= 0; i--) {
+                        //setzt 0 wenn String # ist
+                        if (!field[i][s].equals(stone.symbol1)) {
+                            System.out.println(stone.symbol1);
+                            field[i][s] = String.valueOf(stone.symbol1);
+                            break;
+                        }else {
+                            //  field[i][s] = playerSymbol[0];
+                        }
+                    }
+                }
+                //???
+                view.showGameField(field);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
+
 
     /**
      * @generated
