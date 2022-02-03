@@ -21,6 +21,8 @@ import java.util.Scanner;
  */
 public class GameController {
     public static void main(String[] args) {
+        int randomAnfanger = 0;
+
         PlayerView createPl = new PlayerView();
         GameController rand = new GameController();
         Player Player1 = new Player();
@@ -110,6 +112,7 @@ public class GameController {
 
         if (rand.getRandStarter() == 0) {
             createPl.showPlayer(Player1.getName());
+            randomAnfanger = 1;
         } else {
             createPl.showPlayer(Player2.getName());
         }
@@ -128,19 +131,24 @@ public class GameController {
         view.showGameField(field);
 
         System.out.println("Wo woln sie einwerfen????");
-
+        char symbol;
         try {
             //1 - 7
             while (true) {
                 Scanner c1 = new Scanner(System.in);
                 int s = c1.nextInt();
                 if (s <= 7) {
+                    if (randomAnfanger == 1){
+                      symbol = stone.symbol1;
+                    }else{
+                        symbol = stone1.symbol1;
+                    }
+
                     //von unten nach oben
                     for (int i = field[s].length - 1; i >= 0; i--) {
                         //setzt 0 wenn String # ist
-                        if (!field[i][s].equals(stone.symbol1)) {
-                            System.out.println(stone.symbol1);
-                            field[i][s] = String.valueOf(stone.symbol1);
+                        if (!field[i][s].equals(String.valueOf(symbol))) {
+                            field[i][s] = String.valueOf(symbol);
                             break;
                         }else {
                             //  field[i][s] = playerSymbol[0];
