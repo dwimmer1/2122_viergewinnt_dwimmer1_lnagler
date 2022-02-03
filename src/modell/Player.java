@@ -1,7 +1,7 @@
-package com.example.viergewinnt_dwimmer1_lnagler1.modell;
+package modell;
 
 
-import com.example.viergewinnt_dwimmer1_lnagler1.view.PlayerView;
+import view.PlayerView;  // TODO Wittner: ???
 
 import java.util.Objects;
 import java.util.Random;

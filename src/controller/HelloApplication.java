@@ -1,4 +1,4 @@
-package com.example.viergewinnt_dwimmer1_lnagler1.controller;
+package controller;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

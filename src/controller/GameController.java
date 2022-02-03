@@ -1,13 +1,8 @@
-package com.example.viergewinnt_dwimmer1_lnagler1.controller;
+package controller;
 
 
-import com.example.viergewinnt_dwimmer1_lnagler1.modell.GameField;
-import com.example.viergewinnt_dwimmer1_lnagler1.modell.Player;
-import com.example.viergewinnt_dwimmer1_lnagler1.modell.PlayerSwitch;
-import com.example.viergewinnt_dwimmer1_lnagler1.modell.Stone;
-import com.example.viergewinnt_dwimmer1_lnagler1.view.GameFieldView;
-import com.example.viergewinnt_dwimmer1_lnagler1.view.PlayerView;
-import com.example.viergewinnt_dwimmer1_lnagler1.view.StoneView;
+import modell.*;
+import view.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;

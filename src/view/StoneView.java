@@ -1,4 +1,4 @@
-package com.example.viergewinnt_dwimmer1_lnagler1.view;
+package view;
 
 
 import java.util.Scanner;

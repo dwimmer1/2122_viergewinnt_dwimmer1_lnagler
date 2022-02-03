@@ -1,7 +1,7 @@
-package com.example.viergewinnt_dwimmer1_lnagler1.modell;
+package modell;
 
 
-import com.example.viergewinnt_dwimmer1_lnagler1.view.StoneView;
+import view.StoneView;  // TODO Wittner:   das darf nicht sein!!!!!!!
 
 import java.util.Objects;
 
