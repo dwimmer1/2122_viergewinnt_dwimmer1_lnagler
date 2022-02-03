@@ -11,7 +11,6 @@ public class PlayerView {
         i++;
         if (i > 2) {
             i = 2;
-            System.out.println("Ist schon vergeben");
         }
 
         System.out.println("Spieler " + i + " welchen Namen willst du haben?");
@@ -19,7 +18,9 @@ public class PlayerView {
         return "";
     }
 
-
+    public void vorhanden(){
+        System.out.println("Ist schon vergeben");
+    }
     //                          Operations
 
     /**

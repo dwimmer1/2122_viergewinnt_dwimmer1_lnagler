@@ -1,6 +1,8 @@
 package com.example.viergewinnt_dwimmer1_lnagler1.modell;
 
 
+import com.example.viergewinnt_dwimmer1_lnagler1.view.PlayerView;
+
 import java.util.Objects;
 import java.util.Random;
 
@@ -37,7 +39,8 @@ public class Player extends Stone{
     public String setName(String name) {
         this.name1 = name;
         if(proof()){
-            Player.name = null;
+            PlayerView pl = new PlayerView();
+            pl.vorhanden();
         }else{
             Player.name = name1;
         }

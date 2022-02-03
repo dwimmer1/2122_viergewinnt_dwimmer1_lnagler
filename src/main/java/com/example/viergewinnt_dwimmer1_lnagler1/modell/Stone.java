@@ -1,6 +1,8 @@
 package com.example.viergewinnt_dwimmer1_lnagler1.modell;
 
 
+import com.example.viergewinnt_dwimmer1_lnagler1.view.StoneView;
+
 import java.util.Objects;
 
 /**
@@ -40,7 +42,8 @@ public class Stone {
         this.symbol1 = symbol;
 
         if(proof()){
-            Stone.symbol = '0';
+            StoneView st = new StoneView();
+            st.vorhanden();
         }else {
             Stone.symbol = symbol1;
         }
