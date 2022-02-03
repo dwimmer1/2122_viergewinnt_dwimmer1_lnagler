@@ -10,7 +10,10 @@ public class PlayerSwitch {
     //                          Operations                                  
 
     /**
-     * @generated
+     * Funktionsbeschreibung
+     *
+     * @param   currPlayer übergibt derzeitigen Spieler
+     * @return Derzeitigen Spieler
      */
     public int nextPlayer(int currPlayer) {
         int player = 0;
