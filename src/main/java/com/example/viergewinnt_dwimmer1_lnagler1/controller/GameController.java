@@ -3,6 +3,7 @@ package com.example.viergewinnt_dwimmer1_lnagler1.controller;
 
 import com.example.viergewinnt_dwimmer1_lnagler1.modell.GameField;
 import com.example.viergewinnt_dwimmer1_lnagler1.modell.Player;
+import com.example.viergewinnt_dwimmer1_lnagler1.modell.PlayerSwitch;
 import com.example.viergewinnt_dwimmer1_lnagler1.modell.Stone;
 import com.example.viergewinnt_dwimmer1_lnagler1.view.GameFieldView;
 import com.example.viergewinnt_dwimmer1_lnagler1.view.PlayerView;
@@ -21,7 +22,7 @@ import java.util.Scanner;
  */
 public class GameController {
     public static void main(String[] args) {
-        int randomAnfanger = 0;
+        int currentPlayer = 0;
 
         PlayerView createPl = new PlayerView();
         GameController rand = new GameController();
@@ -112,7 +113,7 @@ public class GameController {
 
         if (rand.getRandStarter() == 0) {
             createPl.showPlayer(Player1.getName());
-            randomAnfanger = 1;
+            currentPlayer = 1;
         } else {
             createPl.showPlayer(Player2.getName());
         }
@@ -128,6 +129,7 @@ public class GameController {
         String[][] field = game.getFieldXY();
 
         GameFieldView view = new GameFieldView();
+        PlayerSwitch playerSwitch = new PlayerSwitch();
         view.showGameField(field);
 
         System.out.println("Wo woln sie einwerfen????");
@@ -135,10 +137,11 @@ public class GameController {
         try {
             //1 - 7
             while (true) {
+                String hash = "#";
                 Scanner c1 = new Scanner(System.in);
                 int s = c1.nextInt();
                 if (s <= 7) {
-                    if (randomAnfanger == 1){
+                    if (currentPlayer == 1){
                       symbol = stone.symbol1;
                     }else{
                         symbol = stone1.symbol1;
@@ -147,8 +150,11 @@ public class GameController {
                     //von unten nach oben
                     for (int i = field[s].length - 1; i >= 0; i--) {
                         //setzt 0 wenn String # ist
-                        if (!field[i][s].equals(String.valueOf(symbol))) {
+                        if (field[i][s].equals(hash)) {
+
                             field[i][s] = String.valueOf(symbol);
+                           currentPlayer = playerSwitch.nextPlayer(currentPlayer);
+
                             break;
                         }else {
                             //  field[i][s] = playerSymbol[0];
