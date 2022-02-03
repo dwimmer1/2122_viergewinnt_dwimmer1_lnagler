@@ -12,8 +12,8 @@ public class Stone {
      * @generated
      */
     private static char symbol;
-    String[] playerSymbol = {"X","O"};
-    private char symbol1;
+    Character[] playerSymbol = {'X','O'};
+    public char symbol1;
     public static boolean rv = true;
 
     /**
@@ -21,12 +21,15 @@ public class Stone {
      */
 
 
+    public char getSymbol1(){
 
+        return symbol1;
+    }
     /**
      * @generated
      * @return
      */
-    public String[] getSymbol() {
+    public Character[] getSymbol() {
         return playerSymbol;
     }
 

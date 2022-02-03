@@ -25,7 +25,7 @@ public class StoneView {
     /**
      * @generated
      */
-        public void showStone(String[] stones) {
+        public void showStone(Character[] stones) {
             System.out.println("Welchen Stein wollen Sie?");
             System.out.println("[0] " + stones[0] + "\n" + "[1] " + stones[1]);
         }
