@@ -10,8 +10,8 @@ public class GameField {
     * @generated
      * Feld mit 6 Rows und 7 Columns (Spalten)
     */
-    String[][] fieldXY = new String[7][7];
-    int[] einwurfFeld = new int[7];
+    String[][] fieldXY = new String[6][7];
+    int[] einwurfFeld = new int[6];
     private Integer x;
     /**
      * d
