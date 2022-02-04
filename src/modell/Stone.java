@@ -1,7 +1,6 @@
 package modell;
 
 
-import view.StoneView;  // TODO Wittner:   das darf nicht sein!!!!!!!
 
 import java.util.Objects;
 
@@ -43,18 +42,12 @@ public class Stone {
      * Funktionsbeschreibung
      *
      * @param   symbol Das eingegebene Spieler symbol
-     * @return 	returned Stone.symbol ein Object von Stone
      */
     public char setSymbol(char symbol) {
         this.symbol1 = symbol;
+        proof();
 
-        if(proof()){
-            StoneView st = new StoneView();
-            st.vorhanden();
-        }else {
-            Stone.symbol = symbol1;
-        }
-                return Stone.symbol;
+        return symbol;
     }
 
     /**

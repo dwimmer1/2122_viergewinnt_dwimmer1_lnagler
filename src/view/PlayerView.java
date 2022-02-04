@@ -1,6 +1,8 @@
 package view;
 
 
+import modell.Player;
+
 /**
  * @generated
  */
@@ -18,8 +20,8 @@ public class PlayerView {
         return "";
     }
 
-    public void vorhanden(){
-        System.out.println("Ist schon vergeben");
+    public void vorhanden(String s){
+        System.out.println(s);
     }
     //                          Operations
 

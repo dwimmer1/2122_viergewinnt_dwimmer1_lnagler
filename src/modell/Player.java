@@ -38,25 +38,17 @@ public class Player extends Stone{
      */
     public String setName(String name) {
         this.name1 = name;
+        String[] decision = {
+                "Ist schon vergeben",
+                "Ist eingelockt"
+        };
         if(proof()){
-            PlayerView pl = new PlayerView();   // TODO Wittner: NEIN!!!!! Die Model Klasse Player, darf auf keinen Fall Zugriff auf die View haben!!!!!!
-            pl.vorhanden();
+           return decision[0];
         }else{
-            Player.name = name1;    // TODO Wittner: WAS soll den hier passieren?! das darf man so nicht lösen!!!
-                                    //     das müssen wir noch besprechen
+            return decision[1];
         }
-
-        return Player.name;
-        //TODO In View diese Method mit einem sout auftrufen
     }
 
-    public String startPlayer(){
-        Random rand = new Random();
-        int value = rand.nextInt(2);
-        System.out.println(value);
-
-        return "";
-    }
     /**
      * @generated
      */

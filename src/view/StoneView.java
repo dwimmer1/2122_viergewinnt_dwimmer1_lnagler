@@ -14,11 +14,6 @@ public class StoneView {
         return "";
     }
 
-    public void vorhanden(){
-        System.out.println("Ist schon vergeben");
-
-    }
-
     public String chooseSymbol(){
 
         return "";

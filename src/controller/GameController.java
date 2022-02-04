@@ -53,8 +53,7 @@ public class GameController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            Player1.setName(eingabe);
-
+            createPl.vorhanden(Player2.setName(eingabe));
 
             Scanner choosesc = new Scanner(System.in);
             st.createStone(decision[0]);
@@ -88,7 +87,7 @@ public class GameController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            Player2.setName(eingabe1);
+            createPl.vorhanden(Player2.setName(eingabe1));
         } while (Player.rv);
 
         do {
