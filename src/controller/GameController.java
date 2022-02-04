@@ -12,12 +12,13 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
+import static java.lang.String.valueOf;
+
 /**
  * @generated
  */
 public class GameController {
     public static void main(String[] args) {
-
 
         play();
     }
@@ -133,7 +134,7 @@ public class GameController {
         PlayerSwitch playerSwitch = new PlayerSwitch();
         view.showGameField(field);
 
-        System.out.println("Wo woln sie einwerfen????");
+        System.out.println("Wo wollen sie einen Stone einwerfen?");
         char symbol;
         try {
             //1 - 7
@@ -149,12 +150,21 @@ public class GameController {
                     }
 
                     //von unten nach oben
-                    for (int i = field[s].length - 1; i >= 0; i--) {
+                    for (int b = field[s].length - 1; b >= 0; b--) {
                         //setzt 0 wenn String # ist
-                        if (field[i][s].equals(hash)) {
+                        if (field[b][s].equals(hash)) {
 
-                            field[i][s] = String.valueOf(symbol);
+                            field[b][s] = valueOf(symbol);
                             currentPlayer = playerSwitch.nextPlayer(currentPlayer);
+                            String player = valueOf(currentPlayer);
+                            for(int i=0;i<=2;i++)                 //Horizontale Gewinnbedingung
+                                for(int j=0;j<=6;j++) {
+                                    if(field [i] [j]==player && field [i+1] [j]==player && field [i+2] [j] ==player && field [i+3] [j] ==player)
+                                {
+                                    //a=true;
+                                }
+                                }
+
 
                             break;
                         } else {
