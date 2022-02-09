@@ -1,4 +1,4 @@
-package com.example.viergewinnt_dwimmer1_lnagler1.modell;
+package modell;
 
 
 /**
@@ -10,8 +10,8 @@ public class GameField {
     * @generated
      * Feld mit 6 Rows und 7 Columns (Spalten)
     */
-    String[][] fieldXY = new String[7][7];
-    int[] einwurfFeld = new int[7];
+    String[][] fieldXY = new String[6][7];
+    int[] einwurfFeld = new int[6];
     private Integer x;
     /**
      * d
@@ -57,10 +57,13 @@ public class GameField {
     public Integer getX() {
         return this.x;
     }
-    
+
     /**
-    * @generated
-    */
+     * Funktionsbeschreibung
+     *
+     * @param    x übergibt x koord
+     * @return 	none
+     */
     public void setX(int x) {
         this.x = x;
     }
@@ -68,7 +71,7 @@ public class GameField {
     
 
     //                          Operations                                  
-    
+
     /**
     * @generated,3
      * Dient zum spielen bzw spiel feld benutzn

@@ -1,4 +1,10 @@
 
+3.2.2022
+PlayField fertigestellt
+Progamm stuctucre umgebaut
+Programm funktioniert (Winn conditions fehlen)
+
+
 2.2.2022
 Klassendiagramm in Java hinzugefügt
 Metoden eingefügt
