@@ -27,6 +27,7 @@ public class GameController {
 
         int currentPlayer = 0;
         boolean checkWin = false;
+        boolean running = true;
 
         PlayerView createPl = new PlayerView();
         GameController rand = new GameController();
@@ -132,6 +133,7 @@ public class GameController {
         String[][] field = game.getFieldXY();
 
         GameFieldView view = new GameFieldView();
+        Conditions condition = new Conditions();
         PlayerSwitch playerSwitch = new PlayerSwitch();
         view.showGameField(field);
 
@@ -139,7 +141,7 @@ public class GameController {
         char symbol;
         try {
             //1 - 7
-            while (true) {
+            while (!checkWin || running) {
                 String hash = "#";
                 Scanner c1 = new Scanner(System.in);
                 int s = c1.nextInt();
@@ -159,17 +161,30 @@ public class GameController {
                             currentPlayer = playerSwitch.nextPlayer(currentPlayer);
                             String stringSymbol = valueOf(symbol);
                             //Character player = valueOf(currentPlayer);
-                            while (!checkWin) {
-                                for (int i = 4; i <= 5; i++) {          //Horizontale Gewinnbedingung
+                                for (int i = 0; i <= 5; i++) {          //Horizontale Gewinnbedingung
                                     for (int j = 0; j <= 6; j++) {
                                         if (Objects.equals(field[i][j], stringSymbol) && Objects.equals(field[i][j + 1], stringSymbol) && Objects.equals(field[i][j + 2], stringSymbol) && Objects.equals(field[i][j + 3], stringSymbol)) {
                                             System.out.println("Win");
+                                            condition.win();
+                                            checkWin = true;
+                                        }
+                                    }
+                                    view.showGameField(field);
+                                }
+                                /*
+                                for (int i = 0; i <= 5; i++) {          //Vertikale Gewinnbedingung
+                                    for (int j = 0; j <= 6; j++) {
+                                        if (Objects.equals(field[i][j], stringSymbol) && Objects.equals(field[i+1][j], stringSymbol) && Objects.equals(field[i+2][j], stringSymbol) && Objects.equals(field[i+3][j], stringSymbol)) {
+                                            System.out.println("Win");
+                                            condition.win();
                                             checkWin = true;
 
                                         }
                                     }
                                 }
-                            }
+                                */
+
+
                             /*
 
 
@@ -181,16 +196,14 @@ public class GameController {
                                 }
                             }
                              */
-
-
-                            break;
+                             break;
                         } else {
                             //  field[i][s] = playerSymbol[0];
                         }
                     }
                 }
                 //???
-                view.showGameField(field);
+
             }
         } catch (Exception e) {
             e.printStackTrace();

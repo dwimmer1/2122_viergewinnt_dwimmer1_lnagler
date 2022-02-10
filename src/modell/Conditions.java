@@ -16,7 +16,7 @@ public class Conditions {
     * @generated
     */
     public void win() {
-        //TODO
+
     }
     /**
     * @generated
