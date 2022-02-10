@@ -26,6 +26,7 @@ public class GameController {
     public static void play() {
 
         int currentPlayer = 0;
+        boolean checkWin = false;
 
         PlayerView createPl = new PlayerView();
         GameController rand = new GameController();
@@ -158,17 +159,17 @@ public class GameController {
                             currentPlayer = playerSwitch.nextPlayer(currentPlayer);
                             String stringSymbol = valueOf(symbol);
                             //Character player = valueOf(currentPlayer);
+                            while (!checkWin) {
+                                for (int i = 4; i <= 5; i++) {          //Horizontale Gewinnbedingung
+                                    for (int j = 0; j <= 6; j++) {
+                                        if (Objects.equals(field[i][j], stringSymbol) && Objects.equals(field[i][j + 1], stringSymbol) && Objects.equals(field[i][j + 2], stringSymbol) && Objects.equals(field[i][j + 3], stringSymbol)) {
+                                            System.out.println("Win");
+                                            checkWin = true;
 
-                            for (int i = 4; i <= 5; i++)                 //Horizontale Gewinnbedingung
-                                for (int j = 0; j <= 6; j++) {
-                                    if (field[i][j] == stringSymbol && field[i][j+1] == stringSymbol && field[i][j + 2] == stringSymbol && field[i][j + 3] == stringSymbol) {
-
-                                        //teste ob wenn bei einer Spalte eiin zb X vorkommt es auch reingeht
-
-                                        System.out.println("YOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
-                                        //a=true;
+                                        }
                                     }
                                 }
+                            }
                             /*
 
 
@@ -180,7 +181,6 @@ public class GameController {
                                 }
                             }
                              */
-
 
 
                             break;
