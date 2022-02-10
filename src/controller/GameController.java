@@ -148,7 +148,7 @@ public class GameController {
                     } else {
                         symbol = stone1.symbol1;
                     }
-                    String stringSymbol = String.valueOf(stone.symbol1);
+
                     //von unten nach oben
                     for (int b = field[s].length - 2; b >= 0; b--) {
                         //setzt 0 wenn String # ist
@@ -156,18 +156,31 @@ public class GameController {
 
                             field[b][s] = valueOf(symbol);
                             currentPlayer = playerSwitch.nextPlayer(currentPlayer);
+                            String stringSymbol = valueOf(symbol);
                             //Character player = valueOf(currentPlayer);
 
-                            for(int i=0;i<=2;i++)                 //Horizontale Gewinnbedingung
-                                for(int j=0;j<=6;j++) {
-                                    if(field [i] [j]==stringSymbol && field [i+1] [j]==stringSymbol && field [i+2] [j] ==stringSymbol && field [i+3] [j] ==stringSymbol)
-                                {
-                                    //teste ob wenn bei einer Spalte eiin zb X vorkommt es auch reingeht
+                            for (int i = 4; i <= 5; i++)                 //Horizontale Gewinnbedingung
+                                for (int j = 0; j <= 6; j++) {
+                                    if (field[i][j] == stringSymbol && field[i][j+1] == stringSymbol && field[i][j + 2] == stringSymbol && field[i][j + 3] == stringSymbol) {
 
-                                    System.out.println("YOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
-                                    //a=true;
+                                        //teste ob wenn bei einer Spalte eiin zb X vorkommt es auch reingeht
+
+                                        System.out.println("YOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
+                                        //a=true;
+                                    }
                                 }
+                            /*
+
+
+                            for (int i = 0; i < 6; i++) {
+                                for (int j = 0; j < 4; j++) {
+                                    if (field[i][j] == stringSymbol && field[i][j + 1] == stringSymbol && field[i][j + 2] == stringSymbol && field[i][j + 3] == stringSymbol) {
+                                        //v = true;
+                                    }
                                 }
+                            }
+                             */
+
 
 
                             break;
