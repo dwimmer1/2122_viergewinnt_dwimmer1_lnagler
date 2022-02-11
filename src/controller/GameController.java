@@ -155,10 +155,10 @@ public class GameController {
 
                     //von unten nach oben
 
-                        for (int b = field[s].length - 2; b >= 0; b--) {
-                            //setzt 0 wenn String # ist
-                            if (field[b][s].equals(hash)) {
-                                while (running) {
+                    for (int b = field[s].length - 2; b >= 0; b--) {
+                        //setzt 0 wenn String # ist
+                        if (field[b][s].equals(hash)) {
+                            while (running) {
                                 field[b][s] = valueOf(symbol);
                                 currentPlayer = playerSwitch.nextPlayer(currentPlayer);
                                 String stringSymbol = valueOf(symbol);
@@ -176,10 +176,10 @@ public class GameController {
                                     }
 
                                 }
-                                /*
-                                for (int i = 0; i <= 5; i++) {          //Vertikale Gewinnbedingung
-                                    for (int j = 0; j <= 6; j++) {
-                                        if (Objects.equals(field[i][j], stringSymbol) && Objects.equals(field[i+1][j], stringSymbol) && Objects.equals(field[i+2][j], stringSymbol) && Objects.equals(field[i+3][j], stringSymbol)) {
+
+                                for (int j = 0; j <= 6; j++) {          //Vertikale Gewinnbedingung
+                                    for (int i = 5; i >= 0; i--) {
+                                        if (Objects.equals(field[i][j], stringSymbol) && Objects.equals(field[i - 1][j], stringSymbol) && Objects.equals(field[i - 2][j], stringSymbol) && Objects.equals(field[i - 3][j], stringSymbol)) {
                                             System.out.println("Win");
                                             condition.win();
                                             checkWin = true;
@@ -187,25 +187,10 @@ public class GameController {
                                         }
                                     }
                                 }
-                                */
-
-
-                            /*
-
-
-                            for (int i = 0; i < 6; i++) {
-                                for (int j = 0; j < 4; j++) {
-                                    if (field[i][j] == stringSymbol && field[i][j + 1] == stringSymbol && field[i][j + 2] == stringSymbol && field[i][j + 3] == stringSymbol) {
-                                        //v = true;
-                                    }
-                                }
-                            }
-                             */
 
                             }
                         }
                     }
-                    //???
                 }
             }
         } catch (Exception e) {
