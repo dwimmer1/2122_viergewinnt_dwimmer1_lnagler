@@ -141,8 +141,9 @@ public class GameController {
         char symbol;
         try {
             //1 - 7
-            while (!checkWin || running) {
+            while (!checkWin) {
                 String hash = "#";
+                running = true;
                 Scanner c1 = new Scanner(System.in);
                 int s = c1.nextInt();
                 if (s <= 7) {
@@ -153,23 +154,27 @@ public class GameController {
                     }
 
                     //von unten nach oben
-                    for (int b = field[s].length - 2; b >= 0; b--) {
-                        //setzt 0 wenn String # ist
-                        if (field[b][s].equals(hash)) {
 
-                            field[b][s] = valueOf(symbol);
-                            currentPlayer = playerSwitch.nextPlayer(currentPlayer);
-                            String stringSymbol = valueOf(symbol);
-                            //Character player = valueOf(currentPlayer);
+                        for (int b = field[s].length - 2; b >= 0; b--) {
+                            //setzt 0 wenn String # ist
+                            if (field[b][s].equals(hash)) {
+                                while (running) {
+                                field[b][s] = valueOf(symbol);
+                                currentPlayer = playerSwitch.nextPlayer(currentPlayer);
+                                String stringSymbol = valueOf(symbol);
+                                running = false;
+                                view.showGameField(field);
+                                //Character player = valueOf(currentPlayer);
                                 for (int i = 0; i <= 5; i++) {          //Horizontale Gewinnbedingung
                                     for (int j = 0; j <= 6; j++) {
                                         if (Objects.equals(field[i][j], stringSymbol) && Objects.equals(field[i][j + 1], stringSymbol) && Objects.equals(field[i][j + 2], stringSymbol) && Objects.equals(field[i][j + 3], stringSymbol)) {
                                             System.out.println("Win");
+                                            view.showGameField(field);
                                             condition.win();
                                             checkWin = true;
                                         }
                                     }
-                                    view.showGameField(field);
+
                                 }
                                 /*
                                 for (int i = 0; i <= 5; i++) {          //Vertikale Gewinnbedingung
@@ -196,19 +201,16 @@ public class GameController {
                                 }
                             }
                              */
-                             break;
-                        } else {
-                            //  field[i][s] = playerSymbol[0];
+
+                            }
                         }
                     }
+                    //???
                 }
-                //???
-
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
 
