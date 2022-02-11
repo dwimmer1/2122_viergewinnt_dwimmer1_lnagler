@@ -18,3 +18,4 @@ Copy it from Linux/MAC if you have Linux and from Windows if you have Windows.
 Paste it into your IntelliJ and put in your own  Path to jaxafx-sdk.
 11.02
 Break aus while entfernt und Code ausgebessert.
+GUI: GUI Spielfeld gemacht
