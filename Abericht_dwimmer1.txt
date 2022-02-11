@@ -1,4 +1,8 @@
 
+11.2.2022
+Conditions in Condition Klasse verlagert
+Funktionskommentare hinzugefügt
+
 3.2.2022
 PlayField fertigestellt
 Progamm stuctucre umgebaut

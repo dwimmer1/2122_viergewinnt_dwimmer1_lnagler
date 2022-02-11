@@ -164,35 +164,17 @@ public class GameController {
                                 String stringSymbol = valueOf(symbol);
                                 running = false;
                                 view.showGameField(field);
-                                //Character player = valueOf(currentPlayer);
-                                for (int i = 0; i <= 5; i++) {          //Horizontale Gewinnbedingung
-                                    for (int j = 0; j <= 6; j++) {
-                                        if (Objects.equals(field[i][j], stringSymbol) && Objects.equals(field[i][j + 1], stringSymbol) && Objects.equals(field[i][j + 2], stringSymbol) && Objects.equals(field[i][j + 3], stringSymbol)) {
-                                            System.out.println("Win");
-                                            view.showGameField(field);
-                                            condition.win();
-                                            checkWin = true;
-                                        }
-                                    }
+                               checkWin = condition.win(field, stringSymbol);
 
-                                }
 
-                                for (int j = 0; j <= 6; j++) {          //Vertikale Gewinnbedingung
-                                    for (int i = 5; i >= 0; i--) {
-                                        if (Objects.equals(field[i][j], stringSymbol) && Objects.equals(field[i - 1][j], stringSymbol) && Objects.equals(field[i - 2][j], stringSymbol) && Objects.equals(field[i - 3][j], stringSymbol)) {
-                                            System.out.println("Win");
-                                            condition.win();
-                                            checkWin = true;
 
-                                        }
-                                    }
-                                }
 
                             }
                         }
                     }
                 }
             }
+            view.showGameField(field);
         } catch (Exception e) {
             e.printStackTrace();
         }
