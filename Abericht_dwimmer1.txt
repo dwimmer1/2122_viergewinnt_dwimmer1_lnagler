@@ -1,4 +1,12 @@
 
+10.2.2022
+Wincondition Vertikal fertigestellt
+probelme bei schleife
+
+4.2.2022
+Spielfeld fertigestellt
+Bugfixes
+
 2.2.2022
 Klassendiagramm in Java hinzugefügt
 uns ausprogammiert
