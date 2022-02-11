@@ -1,17 +1,26 @@
+11.2.2022
+WinCondition Vertikal fertigestellt
+Conditions in Condition Klasse verlagert
+Funktionskommentare hinzugefügt
+
 
 10.2.2022
-Wincondition Vertikal fertigestellt
+Wincondition Horizontal fertigestellt
 probelme bei schleife
 
 4.2.2022
 Spielfeld fertigestellt
 Bugfixes
 
+3.2.2022
+PlayField fertigestellt
+Progamm stuctucre umgebaut
+Programm funktioniert (Winn conditions fehlen)
+
+
 2.2.2022
 Klassendiagramm in Java hinzugefügt
 uns ausprogammiert
-
-
 
 
 28.1.2022
