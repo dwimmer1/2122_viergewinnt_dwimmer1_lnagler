@@ -21,3 +21,4 @@ Break aus while entfernt und Code ausgebessert.
 13.02
 GUI Spielfeld mit einer for-Schleife gemacht
 Player-GUI in Scene Builder designt
+Player-GUI mit Gamefield-GUI zusammengehängt durch einen StartButton und einen eventhandler
