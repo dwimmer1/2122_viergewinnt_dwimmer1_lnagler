@@ -156,9 +156,12 @@ public class GameController {
                     //von unten nach oben
 
                     for (int b = field[s].length - 2; b >= 0; b--) {
+                        System.out.println(field[b].length);
+                        System.out.println(b);
                         //setzt 0 wenn String # ist
                         if (field[b][s].equals(hash)) {
                             while (running) {
+
                                 field[b][s] = valueOf(symbol);
                                 currentPlayer = playerSwitch.nextPlayer(currentPlayer);
                                 String stringSymbol = valueOf(symbol);
