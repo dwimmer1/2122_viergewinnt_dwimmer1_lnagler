@@ -93,6 +93,7 @@ public class HelloController {
                                     running = false;
                                     boolean checkWin = c.win(field, stringSymbol);
                                     System.out.println(Arrays.deepToString(field));
+                                    System.out.println(circle[b]);
                                     if (checkWin){
                                         alert(4);
                                         gridPane.setDisable(true);
