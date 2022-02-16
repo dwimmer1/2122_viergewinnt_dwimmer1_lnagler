@@ -164,7 +164,7 @@ public class GameController {
                                 String stringSymbol = valueOf(symbol);
                                 running = false;
                                 view.showGameField(field);
-                               checkWin = condition.win(field, stringSymbol);
+                                checkWin = condition.win(field, stringSymbol);
 
 
 

@@ -1,2 +1,26 @@
 Klassendiagramm begonnen
 Schritte nach dem Arbeitsbericht von dwimmer1.
+3.02
+KonsolenAnwendung Player und PlayerView/ Stone und StoneView abgeschlossen
+4.02
+JavaFx-Runtime Komponente implementieren.
+EditConfigurations:
+	ModifyOptions
+	Add VM options
+Go to opfenjfx.io
+  Open Documentation
+Reference Documentation
+  Click on Getting Started with JavaFX 11+
+Then Click on JavaFX and IntelliJ
+Download JavaFX SDK if you do not have it yet
+Point 4 in the Document Add VM options
+Copy it from Linux/MAC if you have Linux and from Windows if you have Windows.
+Paste it into your IntelliJ and put in your own  Path to jaxafx-sdk.
+11.02
+Break aus while entfernt und Code ausgebessert.
+13.02
+GUI Spielfeld mit einer for-Schleife gemacht
+Player-GUI in Scene Builder designt
+Player-GUI mit Gamefield-GUI zusammengehängt durch einen StartButton und einen eventhandler
+16.02
+Player-GUI alerts hinzugefügt, die einen doppelten Namen oder eine doppelte Farbe kennzeichen.

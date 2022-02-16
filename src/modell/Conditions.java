@@ -1,7 +1,6 @@
 package modell;
 
 
-import javax.swing.text.View;
 import java.util.Objects;
 
 /**

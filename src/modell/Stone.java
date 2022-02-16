@@ -60,17 +60,9 @@ public class Stone {
                 return Stone.symbol;
     }
 
-    public String setColor(String color){
+    public void setColor(String color){
         this.color1 = color;
-        String[] decision = {
-                "Ist schon vergeben",
-                "Ist eingelockt"
-        };
-        if(proof()){
-            return decision[0];
-        }else{
-            return decision[1];
-        }
+        proof();
     }
 
     /**
