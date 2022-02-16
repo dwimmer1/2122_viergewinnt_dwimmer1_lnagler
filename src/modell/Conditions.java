@@ -9,11 +9,6 @@ import java.util.Objects;
 */
 public class Conditions {
 
-
-
-
-
-
     /**
      * Funktionsbeschreibung
      * Dient zur prüfung des Wins
@@ -33,12 +28,20 @@ public class Conditions {
 
         }
 
-        for (int j = 0; j <= 6; j++) {          //Vertikale Gewinnbedingung
+        for (int j = 0; j < 6; j++) {          //Vertikale Gewinnbedingung
             for (int i = 5; i >= 0; i--) {
                 if (Objects.equals(field[i][j], stringSymbol) && Objects.equals(field[i - 1][j], stringSymbol) && Objects.equals(field[i - 2][j], stringSymbol) && Objects.equals(field[i - 3][j], stringSymbol)) {
                     System.out.println("Win");
                     checkWin = true;
 
+                }
+            }
+        }
+        for (int i = 0; i < 3; i++) {           // Diagonal
+            for (int j = 0; j < 4; j++) {
+                if (Objects.equals(field[i][j], stringSymbol) && Objects.equals(field[i + 1][j + 1], stringSymbol) && Objects.equals(field[i + 2][j + 2], stringSymbol) && Objects.equals(field[i + 3][j + 3], stringSymbol)) {
+                    System.out.println("Win");
+                    checkWin = true;
                 }
             }
         }
@@ -55,9 +58,9 @@ public class Conditions {
     */
     public void draw(String[][] field) {
         for (int i = 0; i < 6; i++) {
-            if (Objects.equals(field[6][i], "X") || Objects.equals(field[6][i], "O")){
+           // if (Objects.equals(field[6][i], "X") || Objects.equals(field[6][i], "O")){
 
-            }
+           // }
         }
 
     }
