@@ -26,6 +26,8 @@ public class GameController {
     public static void play() {
 
         int currentPlayer = 0;
+        boolean checkWin = false;
+        boolean running = true;
 
         PlayerView createPl = new PlayerView();
         GameController rand = new GameController();
@@ -131,6 +133,7 @@ public class GameController {
         String[][] field = game.getFieldXY();
 
         GameFieldView view = new GameFieldView();
+        Conditions condition = new Conditions();
         PlayerSwitch playerSwitch = new PlayerSwitch();
         view.showGameField(field);
 
@@ -138,8 +141,9 @@ public class GameController {
         char symbol;
         try {
             //1 - 7
-            while (true) {
+            while (!checkWin) {
                 String hash = "#";
+                running = true;
                 Scanner c1 = new Scanner(System.in);
                 int s = c1.nextInt();
                 if (s <= 7) {
@@ -148,41 +152,32 @@ public class GameController {
                     } else {
                         symbol = stone1.symbol1;
                     }
-                    String stringSymbol = String.valueOf(stone.symbol1);
+
                     //von unten nach oben
+
                     for (int b = field[s].length - 2; b >= 0; b--) {
                         //setzt 0 wenn String # ist
                         if (field[b][s].equals(hash)) {
-
-                            field[b][s] = valueOf(symbol);
-                            currentPlayer = playerSwitch.nextPlayer(currentPlayer);
-                            //Character player = valueOf(currentPlayer);
-
-                            for(int i=0;i<=2;i++)                 //Horizontale Gewinnbedingung
-                                for(int j=0;j<=6;j++) {
-                                    if(field [i] [j]==stringSymbol && field [i+1] [j]==stringSymbol && field [i+2] [j] ==stringSymbol && field [i+3] [j] ==stringSymbol)
-                                {
-                                    //teste ob wenn bei einer Spalte eiin zb X vorkommt es auch reingeht
-
-                                    System.out.println("YOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
-                                    //a=true;
-                                }
-                                }
+                            while (running) {
+                                field[b][s] = valueOf(symbol);
+                                currentPlayer = playerSwitch.nextPlayer(currentPlayer);
+                                String stringSymbol = valueOf(symbol);
+                                running = false;
+                                view.showGameField(field);
+                               checkWin = condition.win(field, stringSymbol);
+                                    condition.draw(field);
 
 
-                            break;
-                        } else {
-                            //  field[i][s] = playerSymbol[0];
+
+                            }
                         }
                     }
                 }
-                //???
-                view.showGameField(field);
             }
+            view.showGameField(field);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
 

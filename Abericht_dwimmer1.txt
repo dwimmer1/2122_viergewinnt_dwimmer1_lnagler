@@ -1,3 +1,11 @@
+16.2.2022
+Draw condition erstellt
+Bug fix im gamecontroller
+
+
+11.2.2022
+Conditions in Condition Klasse verlagert
+Funktionskommentare hinzugefügt
 
 3.2.2022
 PlayField fertigestellt
