@@ -38,15 +38,15 @@ public class Player extends Stone{
      */
     public String setName(String name) {
         this.name1 = name;
+        String[] decision = {
+                "Ist schon vergeben",
+                "Ist eingelockt"
+        };
         if(proof()){
-            PlayerView pl = new PlayerView();
-            pl.vorhanden();
+            return decision[0];
         }else{
-            Player.name = name1;
+            return decision[1];
         }
-
-        return Player.name;
-        //TODO In View diese Method mit einem sout auftrufen
     }
 
     public String startPlayer(){
@@ -60,7 +60,7 @@ public class Player extends Stone{
      * @generated
      */
     public boolean proof() {
-        if(!Objects.equals(this.name1, name)){
+        if(!Objects.equals(this.name1, name)  && this.name1 != null){
             name = name1;
             rv = false;
         }else{

@@ -32,12 +32,12 @@
             <Font name="Berlin Sans FB" size="72.0" />
          </font>
       </Label>
-      <TextField fx:id="player1name" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" text="Name" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+      <TextField fx:id="player1name" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#setName" prefHeight="35.0" prefWidth="250.0" promptText="Name" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="player2name" alignment="CENTER" layoutX="10.0" layoutY="192.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" text="Name" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+      <TextField fx:id="player2name" alignment="CENTER" layoutX="10.0" layoutY="192.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#setName" prefHeight="35.0" prefWidth="250.0" promptText="Name" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
