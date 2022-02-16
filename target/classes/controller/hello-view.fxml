@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelloController">
@@ -47,15 +46,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <ColorPicker maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" GridPane.halignment="CENTER" GridPane.rowIndex="2">
-         <value>
-            <Color red="1.0" green="0.018518518656492233" blue="0.018518518656492233" />
-         </value>
-      </ColorPicker>
-      <ColorPicker prefHeight="35.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
-         <value>
-            <Color red="1.0" green="0.9333333373069763" />
-         </value>
-      </ColorPicker>
+      <ColorPicker fx:id="player1color" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#setColor" prefHeight="35.0" prefWidth="250.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <ColorPicker fx:id="player2color" onAction="#setColor" prefHeight="35.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
    </children>
 </GridPane>

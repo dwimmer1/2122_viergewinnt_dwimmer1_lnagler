@@ -7,6 +7,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ColorPicker;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
@@ -15,6 +16,7 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import modell.Player;
+import modell.Stone;
 
 
 import java.util.Objects;
@@ -24,8 +26,12 @@ import static javafx.application.Application.launch;
 public class HelloController {
     public TextField player1name;
     public TextField player2name;
+    public ColorPicker player1color;
+    public ColorPicker player2color;
     Player player1 = new Player();
     Player player2 = new Player();
+    Stone stone1 = new Stone();
+    Stone stone2 = new Stone();
     public Button start;
     GridPane gridPane = new GridPane();
     Button[] button = new Button[7];
@@ -81,7 +87,6 @@ public class HelloController {
                 gridPane.add(pane, j, i);
                 gridPane.add(circle[k], j, i);
                 circle[k].addEventHandler(MouseEvent.MOUSE_CLICKED, eventHandler);
-
             }
             System.out.println("Hallo");
         }
@@ -93,22 +98,27 @@ public class HelloController {
     public void startButton(ActionEvent actionEvent) {
         // Diese if fragt ob das Textfield dem Playernamen entspricht wenn Nein wird ein alert ausgegeben
         if (Objects.equals(player1name.getText(), player1.getName()) && Objects.equals(player2name.getText(), player2.getName())) {
-            System.out.println(player1.getName());
-            System.out.println(player2.getName());
-            Stage stage = new Stage();
-            StackPane root = new StackPane();
-            root.getChildren().add(gridPane);
+            if (Objects.equals(String.valueOf(player1color.getValue()), stone1.getColor()) && Objects.equals(String.valueOf(player2color.getValue()), stone2.getColor())) {
+                System.out.println(player1.getName());
+                System.out.println(player2.getName());
+                Stage stage = new Stage();
+                StackPane root = new StackPane();
+                root.getChildren().add(gridPane);
 
-            Scene scene = new Scene(root);
+                Scene scene = new Scene(root);
 
-            stage.setTitle("Vier-Gewinnt");
-            stage.setScene(scene);
-            stage.show();
+                stage.setTitle("Vier-Gewinnt");
+                stage.setScene(scene);
+                stage.show();
+            } else {
+                alert(3);
+            }
         } else {
             //ruft eine Methode auf die einen alert ausgibt
-            sameName(1);
+            alert(1);
         }
     }
+
     //Wenn Textfield benutzt wird, wird diese Methode aufgerufen
     public void setName(ActionEvent actionEvent) {
         //player 1 Name wird angelegt
@@ -121,19 +131,41 @@ public class HelloController {
             player1name.clear();
             player2name.clear();
             //ruft eine Methode auf die einen alert ausgibt
-            sameName(0);
+            alert(0);
         }
     }
 
-    public void sameName(int i) {
+    public void setColor(ActionEvent actionEvent) {
+        stone1.setColor(String.valueOf(player1color.getValue()));
+        System.out.println(stone1.getColor());
+        stone2.setColor(String.valueOf(player2color.getValue()));
+        System.out.println(stone2.getColor());
+        if (Stone.rv) {
+            player1color.setValue(Color.WHITE);
+            player2color.setValue(Color.WHITE);
+            alert(2);
+        }
+    }
+
+    public void alert(int i) {
         if (i == 0) {                       //Wenn zwei gleiche Namen eingegeben werden wird 0 mitgegeben
             alert.setAlertType(Alert.AlertType.ERROR);
             alert.setContentText("Es kann nicht der gleiche Name verwendet werden");
             alert.show();
-        }else if (i == 1){                  //Wenn kein Name eingegeben wurde wird 1 mitgegeben
+        } else if (i == 1) {                  //Wenn kein Name eingegeben wurde wird 1 mitgegeben
             alert.setAlertType(Alert.AlertType.ERROR);
             alert.setContentText("Es wurden keine Namen eingegeben");
             alert.show();
+        } else if (i == 2) {
+            alert.setAlertType(Alert.AlertType.ERROR);
+            alert.setContentText("Es dürfen nicht zwei gleiche Farben verwendet werden");
+            alert.show();
+        }else if(i == 3){
+            alert.setAlertType(Alert.AlertType.ERROR);
+            alert.setContentText("Es wurden keine Farben gewählt");
+            alert.show();
         }
     }
+
+
 }
