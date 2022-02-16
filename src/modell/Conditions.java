@@ -70,7 +70,7 @@ public class Conditions {
     public void draw(String[][] field) {
         for (int i = 0; i < 6; i++) {
             // if (Objects.equals(field[6][i], "X") || Objects.equals(field[6][i], "O")){
-
+            //System.out.println("Untentschieden");
             // }
         }
 
