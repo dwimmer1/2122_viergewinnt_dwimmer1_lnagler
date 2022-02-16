@@ -5,16 +5,17 @@ import javax.swing.text.View;
 import java.util.Objects;
 
 /**
-* @generated
-*/
+ * @generated
+ */
 public class Conditions {
 
     /**
      * Funktionsbeschreibung
      * Dient zur prüfung des Wins
-     * @param    field FeldArray (Spielfeld)
-     * @param    stringSymbol Symbol für den Spieler der derzeit dran ist
-     * @return 	checkWin Returned das der Spieler gewonnen hat
+     *
+     * @param field        FeldArray (Spielfeld)
+     * @param stringSymbol Symbol für den Spieler der derzeit dran ist
+     * @return checkWin Returned das der Spieler gewonnen hat
      */
     public boolean win(String[][] field, String stringSymbol) {
         boolean checkWin = false;
@@ -22,7 +23,7 @@ public class Conditions {
             for (int j = 0; j <= 6; j++) {
                 if (Objects.equals(field[i][j], stringSymbol) && Objects.equals(field[i][j + 1], stringSymbol) && Objects.equals(field[i][j + 2], stringSymbol) && Objects.equals(field[i][j + 3], stringSymbol)) {
                     System.out.println("Win");
-                     checkWin = true;
+                    checkWin = true;
                 }
             }
 
@@ -37,7 +38,7 @@ public class Conditions {
                 }
             }
         }
-        for (int i = 0; i < 3; i++) {           // Diagonal
+        for (int i = 0; i < 3; i++) {           // Diagonal links-rechts
             for (int j = 0; j < 4; j++) {
                 if (Objects.equals(field[i][j], stringSymbol) && Objects.equals(field[i + 1][j + 1], stringSymbol) && Objects.equals(field[i + 2][j + 2], stringSymbol) && Objects.equals(field[i + 3][j + 3], stringSymbol)) {
                     System.out.println("Win");
@@ -45,24 +46,34 @@ public class Conditions {
                 }
             }
         }
+        for (int i = 0; i < 3; i++) {           // Diagonal rechts-links
+            for (int j = 6; j >= 3; j--) {
+                if (Objects.equals(field[i][j], stringSymbol) && Objects.equals(field[i + 1][j - 1], stringSymbol) && Objects.equals(field[i + 2][j - 2], stringSymbol) && Objects.equals(field[i + 3][j - 3], stringSymbol)) {
+                    System.out.println("Win");
+                    checkWin = true;
+                }
+            }
+        }
         return checkWin;
     }
+
     /**
-    * @generated
-    */
+     * @generated
+     */
     public void loose() {
         //TODO
     }
+
     /**
-    * @generated
-    */
+     * @generated
+     */
     public void draw(String[][] field) {
         for (int i = 0; i < 6; i++) {
-           // if (Objects.equals(field[6][i], "X") || Objects.equals(field[6][i], "O")){
+            // if (Objects.equals(field[6][i], "X") || Objects.equals(field[6][i], "O")){
 
-           // }
+            // }
         }
 
     }
-    
+
 }

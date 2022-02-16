@@ -1,6 +1,9 @@
 16.2.2022
 Draw condition erstellt
 Bug fix im gamecontroller
+Wind Condition Diagonal beide Richtungen fertigestellt
+BugFix wegen Array
+
 
 
 11.2.2022

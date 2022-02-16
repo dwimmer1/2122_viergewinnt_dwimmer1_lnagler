@@ -156,8 +156,8 @@ public class GameController {
                     //von unten nach oben
 
                     for (int b = field[s].length - 2; b >= 0; b--) {
-                        System.out.println(field[b].length);
-                        System.out.println(b);
+
+                      //  System.out.println(b);
                         //setzt 0 wenn String # ist
                         if (field[b][s].equals(hash)) {
                             while (running) {
@@ -167,7 +167,7 @@ public class GameController {
                                 String stringSymbol = valueOf(symbol);
                                 running = false;
                                 view.showGameField(field);
-                               checkWin = condition.win(field, stringSymbol);
+                                checkWin = condition.win(field, stringSymbol);
                                     condition.draw(field);
 
 
