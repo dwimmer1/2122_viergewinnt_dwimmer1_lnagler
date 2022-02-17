@@ -1,14 +1,15 @@
 package view;
 
 
-import modell.Player;
 
-/**
- * @generated
- */
 public class PlayerView {
     public static int i = 0;
 
+    /**
+     * Funktionsbeschreibung
+     * Erstellt spieler
+     * @return 	string
+     */
     public String createPlayer() {
         i++;
         if (i > 2) {
@@ -20,13 +21,16 @@ public class PlayerView {
         return "";
     }
 
-    public void vorhanden(String s){
-        System.out.println(s);
+    public void vorhanden(){
+        System.out.println("Ist schon vergeben");
     }
     //                          Operations
 
     /**
-     * @generated
+     * Funktionsbeschreibung
+     * Zeigt welcher Spieler am Zug ist
+     * @param    name name des Spielers
+     * @return 	void
      */
     public void showPlayer(String name) {
         System.out.println("Spieler " + name + " ist am Zug");

@@ -5,25 +5,13 @@ package view;
 * @generated
 */
 public class GameFieldView {
-    
-    
-    
-    
 
-    //                          Operations                                  
-    
     /**
-    * @generated
-     *  System.out.println(" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
-     *         System.out.println("|\t#\t#\t#\t#\t#\t#\t#\t|");
-     *         System.out.println("|\t#\t#\t#\t#\t#\t#\t#\t|");
-     *         System.out.println("|\t#\t#\t#\t#\t#\t#\t#\t|");
-     *         System.out.println("|\t#\t#\t#\t#\t#\t#\t#\t|");
-     *         System.out.println("|\t#\t#\t#\t#\t#\t#\t#\t|");
-     *         System.out.println("|\t#\t#\t#\t#\t#\t#\t#\t|");
-     *         System.out.println("---------------------------------");
-     * zeigt gameField
-    */
+     * Funktionsbeschreibung
+     * printet das game field in die Console
+     * @param    field SpielFeld
+     * @return 	void
+     */
     public void showGameField(String[][] field) {
         System.out.println("------------------------------------------------------");
         for (int i = 0; i < field.length; i++) {

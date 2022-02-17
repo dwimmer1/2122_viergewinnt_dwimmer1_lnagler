@@ -1,16 +1,20 @@
+
+17.2.2022
+WinCondition in Gui
+Gui überarbeitet
+Funktionskommentare
+
+
+16.2.2022
+Draw condition erstellt
+Bug fix im gamecontroller
+Wind Condition Diagonal beide Richtungen fertigestellt
+BugFix wegen Array
+
+
 11.2.2022
-WinCondition Vertikal fertigestellt
 Conditions in Condition Klasse verlagert
 Funktionskommentare hinzugefügt
-
-
-10.2.2022
-Wincondition Horizontal fertigestellt
-probelme bei schleife
-
-4.2.2022
-Spielfeld fertigestellt
-Bugfixes
 
 3.2.2022
 PlayField fertigestellt
@@ -20,7 +24,8 @@ Programm funktioniert (Winn conditions fehlen)
 
 2.2.2022
 Klassendiagramm in Java hinzugefügt
-uns ausprogammiert
+Metoden eingefügt
+PlayField ausprogrammiert
 
 
 28.1.2022
@@ -36,60 +41,4 @@ Datein in das Repo hinzugefügt
 */
 
 20.1.2022
-
 Klassendiagramm Bedeutungen mit LNagler:
-
-Klasse: Controller KOnsole
-
-
-
-
-Klasse: Game
-
-int randStarter 
-Wählt aus welcher Spieler beginnt mit einer rd Zahl(1,0)
-
-Klasse com.example.viergewinnt_dwimmer1_lnagler1.Player:
-
-String name
-(Name des Spielers)
-Char Symbol
-(Symbol des Spielers(x,o))
-String Standartsymbole
-
-Methoden:
-Boolean Proof
-(Prüft ob name des Spielers und symbole der Spieler unterschiedlich sind)
-String ChooseName
-(Spieler wählt seinen Namen aus)
-Char chooseSymbol
-(Spieler wählt sein Symbol aus)
-
-Klasse: com.example.viergewinnt_dwimmer1_lnagler1.GameField
-
-Int[X][Y] Field
-(Das Gesamt Spielfeld mit einem 2Dimensionalen Array x = 7, y = 6)
-Int X
-(Zeilen)
-
-
-Methoden:
-
-Void Used
-(Ein nicht benutztes Feld wird auf benutzt gestzt)
-Boolean isUsed
-(Es wird geprüft ob ein Feld bereits benutz wurde)
-
-
-Klasse: com.example.viergewinnt_dwimmer1_lnagler1.GameFieldView
-
-Methode:
-VOid ShowGameField
-(Zeigt das com.example.viergewinnt_dwimmer1_lnagler1.GameField)
-
-Klasse: com.example.viergewinnt_dwimmer1_lnagler1.PlayerView
-
-Methode:
-
-void ShowPlayer
-(Zeigt derzeitigen Spieler an)

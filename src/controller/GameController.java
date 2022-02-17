@@ -12,12 +12,13 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
+import static java.lang.String.valueOf;
+
 /**
  * @generated
  */
 public class GameController {
     public static void main(String[] args) {
-
 
         play();
     }
@@ -25,6 +26,8 @@ public class GameController {
     public static void play() {
 
         int currentPlayer = 0;
+        boolean checkWin = false;
+        boolean running = true;
 
         PlayerView createPl = new PlayerView();
         GameController rand = new GameController();
@@ -53,7 +56,8 @@ public class GameController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            createPl.vorhanden(Player2.setName(eingabe));
+            Player1.setName(eingabe);
+
 
             Scanner choosesc = new Scanner(System.in);
             st.createStone(decision[0]);
@@ -87,7 +91,7 @@ public class GameController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            createPl.vorhanden(Player2.setName(eingabe1));
+            Player2.setName(eingabe1);
         } while (Player.rv);
 
         do {
@@ -118,26 +122,24 @@ public class GameController {
         } else {
             createPl.showPlayer(Player2.getName());
         }
-        //Stone stone = new Stone();
 
         Character[] playerSymbol = stone.getSymbol();
-
-
         GameField game = new GameField();
-
         game.SetXY();
         String[][] field = game.getFieldXY();
 
         GameFieldView view = new GameFieldView();
+        Conditions condition = new Conditions();
         PlayerSwitch playerSwitch = new PlayerSwitch();
         view.showGameField(field);
 
-        System.out.println("Wo woln sie einwerfen????");
+        System.out.println("Wo wollen sie einen Stone einwerfen?");
         char symbol;
         try {
             //1 - 7
-            while (true) {  // TODO Wittner: EINE ENDLOSSCHLEIFE ?!!!!!!
+            while (!checkWin) {
                 String hash = "#";
+                running = true;
                 Scanner c1 = new Scanner(System.in);
                 int s = c1.nextInt();
                 if (s <= 7) {
@@ -148,38 +150,37 @@ public class GameController {
                     }
 
                     //von unten nach oben
-                    for (int i = field[s].length - 1; i >= 0; i--) {
+
+                    for (int b = field[s].length - 2; b >= 0; b--) {
+
+                      //  System.out.println(b);
                         //setzt 0 wenn String # ist
-                        if (field[i][s].equals(hash)) {
+                        if (field[b][s].equals(hash)) {
+                            while (running) {
 
-                            field[i][s] = String.valueOf(symbol);
-                            currentPlayer = playerSwitch.nextPlayer(currentPlayer);
+                                field[b][s] = valueOf(symbol);
+                                currentPlayer = playerSwitch.nextPlayer(currentPlayer);
+                                String stringSymbol = valueOf(symbol);
+                                running = false;
+                                view.showGameField(field);
+                                checkWin = condition.win(field, stringSymbol);
+                                condition.draw(field, stringSymbol);
 
-                            break;  // TODO Wittner: UND DIE NOCH MIT BREAK VERLASSEN!!!!! Das ist ein NO-GO
-                        } else {
-                            //  field[i][s] = playerSymbol[0];
+
+
+                            }
                         }
                     }
                 }
-                //???
-                view.showGameField(field);
             }
+            view.showGameField(field);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
-
-
-    /**
-     * @generated
-     */
     private Integer randStarter;
 
 
-    /**
-     * @generated
-     */
     public Integer getRandStarter() {
         Random rand = new Random();
         int value = rand.nextInt(2);

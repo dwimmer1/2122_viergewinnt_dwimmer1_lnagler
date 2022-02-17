@@ -10,17 +10,14 @@ public class GameField {
     * @generated
      * Feld mit 6 Rows und 7 Columns (Spalten)
     */
-    String[][] fieldXY = new String[7][7];  // TODO Wittner: das sind aber 7 x 7 != DOKU
-    int[] einwurfFeld = new int[7]; // TODO Wittner: wozu wird den diese Eigenschaft verwendet???
+    String[][] fieldXY = new String[6][7];
+    int[] einwurfFeld = new int[6];
     private Integer x;
     /**
-     * d
-    * @generated
-     *
-     * setzt die X und Y koord auf ein leeres Zeichen (#)
-    */
-
-    
+     * Funktionsbeschreibung
+     *setzt die X und Y koord auf ein leeres Zeichen (#)
+     * @return 	void
+     */
     public void SetXY(){
         for (int i = 0; i < fieldXY.length; i++) {
             for (int j = 0; j < fieldXY[i].length; j++) {
@@ -35,58 +32,31 @@ public class GameField {
     }
 
     /**
-    * @generated
-     * @return
-    */
+     * Funktionsbeschreibung
+     * returnd SpielFeld
+     * @return 	fieldXY
+     */
     public String[][] getFieldXY() {
         return this.fieldXY;
     }
-    
-    /**
-    * @generated
-    public int[][] setFieldXY() {
-    //
-    return "1";
-    }
-     */
 
-    
     /**
-    * @generated
-    */
+     * Funktionsbeschreibung
+     * bekommt x koordinate
+     * @return 	x
+     */
     public Integer getX() {
         return this.x;
     }
 
     /**
      * Funktionsbeschreibung
-     *
      * @param    x übergibt x koord
-     * @return 	none
+     * @return 	void
      */
     public void setX(int x) {
         this.x = x;
     }
-    
-    
 
-    //                          Operations                                  
-
-    /**
-    * @generated,3
-     * Dient zum spielen bzw spiel feld benutzn
-     */
-    public void use() {
-        //TODO
-    }
-    /**
-    * @generated
-     * prüft ob ein feld bereits benutz ist
-    */
-    public boolean isUsed() {
-        //TODO
-
-        return false;
-    }
     
 }
