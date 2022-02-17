@@ -13,6 +13,7 @@ public class Player extends Stone{
     private static String name;
     public static boolean rv = true;
     private String name1;
+    private int randStarter;
 
     /**
      * Funktionsbeschreibung
@@ -48,12 +49,11 @@ public class Player extends Stone{
      * Random vom spieler start
      * @return 	String
      */
-    public String startPlayer(){
+    public int getRandStarter(){
         Random rand = new Random();
-        int value = rand.nextInt(2);
-        System.out.println(value);
+        randStarter = rand.nextInt(2);
 
-        return "";
+        return this.randStarter;
     }
     /**
      * Funktionsbeschreibung

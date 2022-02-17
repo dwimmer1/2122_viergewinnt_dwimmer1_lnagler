@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -34,13 +35,14 @@ public class HelloController {
     public ColorPicker player2color;
     public TextField change1name;
     public TextField change2name;
+    Player starter = new Player();
     Player player1 = new Player();
     Player player2 = new Player();
     Stone stone1 = new Stone();
     Stone stone2 = new Stone();
     Conditions c = new Conditions();
+    Label currPlayer = new Label();
     public Button start;
-    Button restart = new Button();
     Button menu = new Button();
     GridPane gridPane = new GridPane();
     Circle[][] circle = new Circle[6][7];
@@ -52,6 +54,9 @@ public class HelloController {
     int currentPlayer = 0;
     String[][] field = new String[6][7];
     PlayerSwitch playerSwitch = new PlayerSwitch();
+    Button help = new Button();
+    Label helpText = new Label();
+    String playerName;
 
 
     EventHandler<MouseEvent> eventHandler = new EventHandler<MouseEvent>() {
@@ -59,44 +64,43 @@ public class HelloController {
         //Wenn auf das Gridpane geclickt wird, wird diese Methode aufgerufen
         public void handle(MouseEvent e) {
             Node source = (Node) e.getSource();
-            System.out.println(source);
             int col = GridPane.getColumnIndex(source);
             int row = GridPane.getRowIndex(source);
             String color;
             char symbol;
             try {
+                running = true;
 
-                    running = true;
+                if (col <= 7) {
+                    if (currentPlayer == 1) {
+                        playerName = player1.getName();
+                        currPlayer.setText("Aktueller Spieler: \n" + player1.getName());
+                        color = stone1.getColor();
+                        symbol = 'X';
+                    } else {
+                        playerName = player2.getName();
+                        currPlayer.setText("Aktueller Spieler: \n" + player2.getName());
+                        color = stone2.getColor();
+                        symbol = 'O';
+                    }
 
-                    if (col <= 7) {
-                        if (currentPlayer == 1) {
-                            color = stone1.getColor();
-                            symbol = 'X';
-                        } else {
-                            color = stone2.getColor();
-                            symbol = 'O';
-                        }
+                    //von unten nach oben
 
-                        //von unten nach oben
-
-                        for (int b = 7 - 2; b >= 0; b--) {
-                            //setzt 0 wenn String # ist
-                            System.out.println(source);
-                            if (circle[row][col].getFill() == circle[b][col].getFill()) {
-                                System.out.println("Hallo");
-                                while (running) {
-                                    circle[b][col] = new Circle(40, Color.valueOf(color));
-                                    gridPane.add(circle[b][col], col, b);
-                                    field[b][col] = valueOf(symbol);
-                                    currentPlayer = playerSwitch.nextPlayer(currentPlayer);
-                                    String stringSymbol = String.valueOf(symbol);
-                                    running = false;
-                                    boolean checkWin = c.win(field, stringSymbol);
-                                    System.out.println(Arrays.deepToString(field));
-                                    if (checkWin){
-                                        alert(4);
-                                        gridPane.setDisable(true);
-                                    }
+                    for (int b = 7 - 2; b >= 0; b--) {
+                        if (circle[row][col].getFill() == circle[b][col].getFill()) {
+                            while (running) {
+                                circle[b][col] = new Circle(40, Color.valueOf(color));
+                                gridPane.add(circle[b][col], col, b);
+                                field[b][col] = valueOf(symbol);
+                                currentPlayer = playerSwitch.nextPlayer(currentPlayer);
+                                String stringSymbol = String.valueOf(symbol);
+                                running = false;
+                                boolean checkWin = c.win(field, stringSymbol);
+                                if (checkWin){
+                                    alert(4);
+                                    currPlayer.setText(playerName + " Won the Game");
+                                    gridPane.setDisable(true);
+                                }
                             }
                         }
                     }
@@ -105,17 +109,22 @@ public class HelloController {
                     Exception t) {
                 t.printStackTrace();
             }
-
-
-            System.out.println(player1.getName());
         }
     };
 
     @FXML
     public void initialize() {
+        gridPane.setDisable(false);
+        help.setText("Anleitung");
+        help.setStyle("-fx-font-size: 14px");
         menu.setText("Menü");
-        restart.setText("Restart");
-        menu.setStyle("-fx-font-size: 14px");
+        menu.setStyle("-fx-font-size: 18px");
+
+        if (starter.getRandStarter() == 0) {
+            currentPlayer = 1;
+        } else {
+            currentPlayer = 0;
+        }
 
         int k = 0;
         for (int i = 0; i < 6; i++) {
@@ -130,10 +139,19 @@ public class HelloController {
                 circle[i][j].addEventHandler(MouseEvent.MOUSE_CLICKED, eventHandler);
                 k++;
             }
-            System.out.println("Hallo");
         }
-
-
+        vBox.getChildren().add(gridPane);
+        vbox1.getChildren().add(menu);
+        vbox1.setMaxHeight(480);
+        vbox1.setPrefWidth(200);
+        vbox1.setMaxWidth(200);
+        vbox1.setBackground(new Background(new BackgroundFill(Color.LIGHTBLUE, CornerRadii.EMPTY, Insets.EMPTY)));
+        vbox1.getChildren().add(currPlayer);
+        vbox1.getChildren().add(help);
+        vbox1.getChildren().add(helpText);
+        hBox.getChildren().add(vBox);
+        hBox.getChildren().add(vbox1);
+        hBox.setSpacing(20);
     }
 
     //Wenn startButton gedrückt wird, wird das Gamefield-Fenster geöffnet.
@@ -144,11 +162,7 @@ public class HelloController {
             if (Objects.equals(String.valueOf(player1color.getValue()), stone1.getColor()) && Objects.equals(String.valueOf(player2color.getValue()), stone2.getColor())) {
                 Stage stage = (Stage) start.getScene().getWindow();
                 stage.close();
-                vBox.getChildren().add(gridPane);
-                vbox1.getChildren().add(menu);
-                vbox1.getChildren().add(restart);
-                hBox.getChildren().add(vBox);
-                hBox.getChildren().add(vbox1);
+
 
                 Stage stage1 = new Stage();
                 StackPane root = new StackPane();
@@ -163,6 +177,7 @@ public class HelloController {
                 menu.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent x) {
+                        stage1.close();
                         initialize();
                         try {
                             FXMLLoader fxmlLoader = new FXMLLoader();
@@ -176,9 +191,12 @@ public class HelloController {
                     }
                 });
 
-                restart.setOnAction(new EventHandler<ActionEvent>() {
+                help.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent actionEvent) {
+                        helpText.setWrapText(true);
+                        helpText.setStyle("-fx-font-size: 12px");
+                        helpText.setText("Das Spielbrett besteht aus sieben Spalten (senkrecht) und sechs Reihen (waagerecht). Wenn ein Spieler einen Spielstein in eine Spalte fallen lässt, besetzt dieser den untersten freien Platz der Spalte. Gewinner ist der Spieler, der es als erster schafft, vier oder mehr seiner Spielsteine waagerecht, senkrecht oder diagonal in eine Linie zu bringen. Der Spieler wird am Anfang der runde random ausgelost und jeder Spieler wechselt sich nacheinander ab bis einer gewonnen hat oder es zu einem untentschieden kommt");
                     }
                 });
 
@@ -211,9 +229,7 @@ public class HelloController {
     //Wenn eine Farbe ausgewählt wird wird sie sofort gesetzt
     public void setColor(ActionEvent actionEvent) {
         stone1.setColor(String.valueOf(player1color.getValue()));
-        System.out.println(stone1.getColor());
         stone2.setColor(String.valueOf(player2color.getValue()));
-        System.out.println(stone2.getColor());
         //Überprüft ob zwei gleiche Farben ausgewählt wurden
         if (Stone.rv) {
             player1color.setValue(Color.WHITE);
