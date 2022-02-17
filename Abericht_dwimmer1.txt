@@ -1,3 +1,10 @@
+
+17.2.2022
+WinCondition in Gui
+Gui überarbeitet
+Funktionskommentare
+
+
 16.2.2022
 Draw condition erstellt
 Bug fix im gamecontroller

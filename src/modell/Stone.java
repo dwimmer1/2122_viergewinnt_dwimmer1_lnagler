@@ -5,22 +5,14 @@ import view.StoneView;  // TODO Wittner:   das darf nicht sein!!!!!!!
 
 import java.util.Objects;
 
-/**
- * @generated
- */
+
 public class Stone {
 
-    /**
-     * @generated
-     */
+
     private static char symbol;
     Character[] playerSymbol = {'X','O'};
     public char symbol1;
     public static boolean rv = true;
-
-    /**
-     * @generated
-     */
 
     /**
      * Funktionsbeschreibung
@@ -32,7 +24,6 @@ public class Stone {
     }
     /**
      * Funktionsbeschreibung
-     *
      * @return 	returned player Symbol
      */
     public Character[] getSymbol() {
@@ -63,7 +54,6 @@ public class Stone {
      * @return 	returned rv
      */
 
-
     public boolean proof(){
         if(!Objects.equals(this.symbol1, symbol)){
             symbol = symbol1;
@@ -74,14 +64,4 @@ public class Stone {
         return rv;
     }
 
-
-
-    //                          Operations                                  
-
-    /**
-     * @generated
-     */
-    public void chooseSettings() {
-        //TODO
-    }
 }

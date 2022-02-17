@@ -1,12 +1,15 @@
 package view;
 
 
-/**
- * @generated
- */
+
 public class PlayerView {
     public static int i = 0;
 
+    /**
+     * Funktionsbeschreibung
+     * Erstellt spieler
+     * @return 	string
+     */
     public String createPlayer() {
         i++;
         if (i > 2) {
@@ -24,7 +27,10 @@ public class PlayerView {
     //                          Operations
 
     /**
-     * @generated
+     * Funktionsbeschreibung
+     * Zeigt welcher Spieler am Zug ist
+     * @param    name name des Spielers
+     * @return 	void
      */
     public void showPlayer(String name) {
         System.out.println("Spieler " + name + " ist am Zug");

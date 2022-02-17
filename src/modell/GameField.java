@@ -14,13 +14,10 @@ public class GameField {
     int[] einwurfFeld = new int[6];
     private Integer x;
     /**
-     * d
-    * @generated
-     *
-     * setzt die X und Y koord auf ein leeres Zeichen (#)
-    */
-
-    
+     * Funktionsbeschreibung
+     *setzt die X und Y koord auf ein leeres Zeichen (#)
+     * @return 	void
+     */
     public void SetXY(){
         for (int i = 0; i < fieldXY.length; i++) {
             for (int j = 0; j < fieldXY[i].length; j++) {
@@ -35,58 +32,31 @@ public class GameField {
     }
 
     /**
-    * @generated
-     * @return
-    */
+     * Funktionsbeschreibung
+     * returnd SpielFeld
+     * @return 	fieldXY
+     */
     public String[][] getFieldXY() {
         return this.fieldXY;
     }
-    
-    /**
-    * @generated
-    public int[][] setFieldXY() {
-    //
-    return "1";
-    }
-     */
 
-    
     /**
-    * @generated
-    */
+     * Funktionsbeschreibung
+     * bekommt x koordinate
+     * @return 	x
+     */
     public Integer getX() {
         return this.x;
     }
 
     /**
      * Funktionsbeschreibung
-     *
      * @param    x übergibt x koord
-     * @return 	none
+     * @return 	void
      */
     public void setX(int x) {
         this.x = x;
     }
-    
-    
 
-    //                          Operations                                  
-
-    /**
-    * @generated,3
-     * Dient zum spielen bzw spiel feld benutzn
-     */
-    public void use() {
-        //TODO
-    }
-    /**
-    * @generated
-     * prüft ob ein feld bereits benutz ist
-    */
-    public boolean isUsed() {
-        //TODO
-
-        return false;
-    }
     
 }

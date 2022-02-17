@@ -1,13 +1,8 @@
 package modell;
 
 
-/**
- * @generated
- */
 public class PlayerSwitch {
 
-
-    //                          Operations                                  
 
     /**
      * Funktionsbeschreibung

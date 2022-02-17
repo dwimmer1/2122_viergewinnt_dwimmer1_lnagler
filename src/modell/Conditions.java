@@ -58,15 +58,22 @@ public class Conditions {
     }
 
     /**
-     * @generated
+     * Funktionsbeschreibung
+     * loose condition wenn verloren
+     * @return 	none
      */
     public void loose() {
         //TODO
     }
 
     /**
-     * @generated
+     * Funktionsbeschreibung
+     *  draw condition wenn untentschieden
+     * @param    field feld array
+     * @param    symbol symbol des Spieles
+     * @return 	void
      */
+
     public void draw(String[][] field,String symbol) {
         for (int i = 0; i < 6; i++) {
              if (Objects.equals(field[0][i],symbol)){
