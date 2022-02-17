@@ -1,75 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
-    <children>
-        <GridPane fx:id="gridPaneGitter" gridLinesVisible="true" layoutX="54.0" layoutY="47.0" prefHeight="285.0" prefWidth="492.0">
-            <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            </columnConstraints>
-            <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            </rowConstraints>
-            <children>
-                <Pane fx:id="paneZelle00" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5" />
-                <Pane fx:id="paneZelle01" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                <Pane fx:id="paneZelle02" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                <Pane fx:id="paneZelle03" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                <Pane fx:id="paneZelle04" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-                <Pane fx:id="paneZelle05" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-                <Pane fx:id="paneZelle06" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-                <Pane fx:id="paneZelle10" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4" />
-                <Pane fx:id="paneZelle11" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                <Pane fx:id="paneZelle12" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                <Pane fx:id="paneZelle14" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-                <Pane fx:id="paneZelle15" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-                <Pane fx:id="paneZelle16" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-                <Pane fx:id="paneZelle20" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
-                <Pane fx:id="paneZelle21" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <Pane fx:id="paneZelle22" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                <Pane fx:id="paneZelle23" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                <Pane fx:id="paneZelle24" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                <Pane fx:id="paneZelle25" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                <Pane fx:id="paneZelle26" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-                <Pane fx:id="paneZelle30" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
-                <Pane fx:id="paneZelle31" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <Pane fx:id="paneZelle32" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                <Pane fx:id="paneZelle33" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                <Pane fx:id="paneZelle34" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                <Pane fx:id="paneZelle35" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-                <Pane fx:id="paneZelle36" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-                <Pane fx:id="paneZelle40" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
-                <Pane fx:id="paneZelle41" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <Pane fx:id="paneZelle42" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                <Pane fx:id="paneZelle43" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                <Pane fx:id="paneZelle44" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                <Pane fx:id="paneZelle45" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                <Pane fx:id="paneZelle46" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                <Pane fx:id="paneZelle50" layoutX="100.0" prefHeight="200.0" prefWidth="200.0" />
-                <Pane fx:id="paneZelle51" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
-                <Pane fx:id="paneZelle52" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
-                <Pane fx:id="paneZelle53" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" />
-                <Pane fx:id="paneZelle54" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" />
-                <Pane fx:id="paneZelle55" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" />
-                <Pane fx:id="paneZelle56" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" />
-                <Pane fx:id="paneZelle13" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            </children>
-        </GridPane>
-    </children>
-</AnchorPane>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelloController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.0" minWidth="10.0" prefWidth="315.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="314.0" minWidth="10.0" prefWidth="315.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="CENTER" prefHeight="242.0" prefWidth="300.0" text="Player1" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB" size="72.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="242.0" prefWidth="300.0" text="Player2" textAlignment="CENTER" GridPane.columnIndex="1">
+         <font>
+            <Font name="Berlin Sans FB" size="72.0" />
+         </font>
+      </Label>
+      <TextField fx:id="player1name" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#setName" prefHeight="35.0" prefWidth="250.0" promptText="Name" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="player2name" alignment="CENTER" layoutX="10.0" layoutY="192.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#setName" prefHeight="35.0" prefWidth="250.0" promptText="Name" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="start" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#startButton" prefHeight="25.0" prefWidth="200.0" text="Start" textOverrun="LEADING_ELLIPSIS" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <ColorPicker fx:id="player1color" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#setColor" prefHeight="35.0" prefWidth="250.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <ColorPicker fx:id="player2color" onAction="#setColor" prefHeight="35.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+   </children>
+</GridPane>

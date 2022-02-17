@@ -11,6 +11,8 @@ public class Stone {
     private static char symbol;
     Character[] playerSymbol = {'X','O'};
     public char symbol1;
+    public String color1;
+    private static String color;
     public static boolean rv = true;
 
     /**
@@ -28,6 +30,7 @@ public class Stone {
     public Character[] getSymbol() {
         return playerSymbol;
     }
+    public String getColor(){return color1;}
 
     /**
      * Funktionsbeschreibung
@@ -41,6 +44,11 @@ public class Stone {
         return symbol;
     }
 
+    public void setColor(String color){
+        this.color1 = color;
+        proof();
+    }
+
     /**
      * Funktionsbeschreibung
         prüft ob symbol vom Spieler 1 das gleiche symbol wie von Spieler 2 ist
@@ -48,8 +56,9 @@ public class Stone {
      */
 
     public boolean proof(){
-        if(!Objects.equals(this.symbol1, symbol)){
+        if(!Objects.equals(this.symbol1, symbol) || !Objects.equals(this.color1, color)){
             symbol = symbol1;
+            color = color1;
             rv = false;
         }else {
             rv = true;

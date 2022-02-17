@@ -22,3 +22,5 @@ Break aus while entfernt und Code ausgebessert.
 GUI Spielfeld mit einer for-Schleife gemacht
 Player-GUI in Scene Builder designt
 Player-GUI mit Gamefield-GUI zusammengehängt durch einen StartButton und einen eventhandler
+16.02
+Player-GUI alerts hinzugefügt, die einen doppelten Namen oder eine doppelte Farbe kennzeichen.
