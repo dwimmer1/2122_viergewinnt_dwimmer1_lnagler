@@ -65,7 +65,7 @@ public class HelloController {
             String color;
             char symbol;
             try {
-                    System.out.println("ich hvhagsvdhgvjhdFSdfguhDVGUdv");
+
                     running = true;
 
                     if (col <= 7) {
@@ -93,7 +93,6 @@ public class HelloController {
                                     running = false;
                                     boolean checkWin = c.win(field, stringSymbol);
                                     System.out.println(Arrays.deepToString(field));
-                                    System.out.println(circle[b]);
                                     if (checkWin){
                                         alert(4);
                                         gridPane.setDisable(true);
