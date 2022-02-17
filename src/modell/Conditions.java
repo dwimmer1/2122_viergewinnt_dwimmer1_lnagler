@@ -67,11 +67,11 @@ public class Conditions {
     /**
      * @generated
      */
-    public void draw(String[][] field) {
+    public void draw(String[][] field,String symbol) {
         for (int i = 0; i < 6; i++) {
-            // if (Objects.equals(field[6][i], "X") || Objects.equals(field[6][i], "O")){
-            //System.out.println("Untentschieden");
-            // }
+             if (Objects.equals(field[0][i],symbol)){
+                System.out.println("Untentschieden");
+             }
         }
 
     }

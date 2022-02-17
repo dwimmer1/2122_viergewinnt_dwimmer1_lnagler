@@ -122,13 +122,9 @@ public class GameController {
         } else {
             createPl.showPlayer(Player2.getName());
         }
-        //Stone stone = new Stone();
 
         Character[] playerSymbol = stone.getSymbol();
-
-
         GameField game = new GameField();
-
         game.SetXY();
         String[][] field = game.getFieldXY();
 
@@ -168,7 +164,7 @@ public class GameController {
                                 running = false;
                                 view.showGameField(field);
                                 checkWin = condition.win(field, stringSymbol);
-                                    condition.draw(field);
+                                condition.draw(field, stringSymbol);
 
 
 
@@ -182,17 +178,9 @@ public class GameController {
             e.printStackTrace();
         }
     }
-
-
-    /**
-     * @generated
-     */
     private Integer randStarter;
 
 
-    /**
-     * @generated
-     */
     public Integer getRandStarter() {
         Random rand = new Random();
         int value = rand.nextInt(2);
